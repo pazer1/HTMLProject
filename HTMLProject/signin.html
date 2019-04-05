@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title></title>
+        <style>
+            *{
+            font-style: normal;
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            }
+            #header{
+                display: flex;
+                border-top: 5px solid gray;
+                height: 156px;
+                width: 960px;
+                position: relative;
+                padding: 45px 0 40px;
+                margin: auto;
+            }
+            #header #hgroup{float: left;}
+            #header #hgroup h1, #header #hgroup h2{font-weight:normal; font-style:normal; text-transform:none;}
+            #header #hgroup h1{font-size:46px;}
+            #header #hgroup h1 span{font-size:36px; text-transform:uppercase;}
+            #header #hgroup h1 a{color:#000000; background-color:#FFFFFF;}
+            #header #hgroup h2{font-size:12px; text-align:right;}
+
+            .navbar{
+                    display: flex;
+                    background-color: #333333;
+                    width: 960px;
+                    margin: auto;
+                    height: 47px;
+                    border: 1px solid lightpink;
+                }
+            .navbar a{
+                color:white;
+                padding: 14px 24px;
+                text-decoration: none;
+            }
+            .navbar a:hover{
+                background-color: white;
+                color: black;
+            }
+            .sildImg{
+                display: flex;
+                height: 500px;
+            }
+            
+            footer{
+                    height: 55px;
+                    background-color:#ddd; 
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+            @media screen and (max-width:600px){
+                    .navbar{
+                        flex-direction: column;
+                        height: 100%;
+                        width: 100%;
+                    }
+                    
+                    .sildImg{
+                        height: 250px;
+                    }
+                    .sildImg .mySlides{
+                        width: 100%;
+                    }
+                    a{
+                        text-align: center;
+                    }     
+            }
+           
+        </style>
+    </head>
+    <body>
+        <header id="header" class="clear">
+                <div id="hgroup">
+                    <h1><a href="index.html">C<span>oncept</span> C<span>lean</span></a></h1>
+                    <h2>Free Website Template</h2>
+                </div>
+        </header>
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">현재상영작</a>
+            <a href="#">Animation</a>
+            <a href="#">한국영화</a>
+            <a href="#">외국영화</a>
+            <a href="#">고객건의</a>
+            <a href="#">회원가입</a>
+            <a href="#">사이트맵</a>
+        </nav>
+        <div class="container">
+            
+        </div>
+        <footer class="footer">
+            <h2>Footer</h2>
+        </footer>
+    </body>
+
+        <script>
+                var slideIndex = 1;
+                showDivs(slideIndex);
+                
+                function plusDivs(n) {
+                showDivs(slideIndex += n);
+                }
+                
+                function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                if (n > x.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = x.length} ;
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                }
+                x[slideIndex-1].style.display = "block";  
+                }
+        </script>
+</html>
