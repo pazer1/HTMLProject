@@ -80,7 +80,7 @@
           transform: translateY(-300%);
           background: #aaa; 
         }
-        
+    
         
         .dropdown-wrapper:hover > .menu-button {
           color: #c14400;
@@ -128,7 +128,7 @@
           
           .header-container {
             width: 100%;
-            margin: 0 0 0 0;
+            margin: 0;
           }
         
           .header-container {
@@ -150,7 +150,7 @@
           }
           .sildImg{
               height: 250px;
-              position: relative;;
+              position: relative;
           }
           .sildImg .mySlides{
               width: 100%;
@@ -158,6 +158,37 @@
           footer{
               width: 100%;
               align-items: center;
+          }
+          .row-item{
+              flex-direction: column;
+              align-items: center;
+              height: 80%;
+          }
+          
+
+          .card{
+              margin: 0;
+          }
+
+          .card:hover .card-header  {
+            opacity: 0.8;
+            height: 10px;
+            background-image: url("shazam.jpg");
+        }
+
+        .card-header {
+            transition: 0.5s;
+            width: 100%;
+            border-radius: 15px 15px 0 0;
+            background-size: 100% 280px;
+            background-repeat: no-repeat;	
+        }
+     
+
+    
+         
+          #article{
+              flex-direction: column;
           }
         }
         
@@ -217,109 +248,291 @@
         </div>
 
 
-        <div id="content" class="muti photodata">
-          <article id="article" style="border:1px solid red; height: 1000px; width: 960px; margin: auto">
-              <ul class="coverdata">
-                <li>
-                  <a href="http://image.cine21.com/resize/cine21/movie/2019/0405/10_49_37__5ca6b43180600[H800-].jpg" rel="cover_photo" title="1200호" class="cover_image">
-                    <img src="http://image.cine21.com/resize/cine21/movie/2019/0405/10_49_37__5ca6b43180600[X300,360].jpg" alt="" class="thumb">
-                  </a>
-                  <div class="tit_box">
-                    <p class="ho_num">No.1200</p>
-                    <p class="date">2019-04-09~2019-04-16</p>
-                    
-                          <p class="coverpeople">
-                      커버인물
-                      <span class="bar">|</span>
-                      <strong>
-                              <a href="/db/person/info/?person_id=57423">김윤석</a>&nbsp;
-                              <a href="/db/person/info/?person_id=10414">염정아</a>&nbsp;
-                              <a href="/db/person/info/?person_id=82573">김소진</a>&nbsp;
-                              <a href="/db/person/info/?person_id=104624">김혜준</a>&nbsp;
-                              <a href="/db/person/info/?person_id=108169">박세진</a>&nbsp;
-                              </strong>
-                    </p>
+        <div class="content">
+          <article id="article" style="border:1px solid red;  max-width: 960px; margin: auto; padding: 10px; display: flex;">
+                <section class="row1" style="border:1px solid red; flex-basis: 100%; padding: 10px">
+                    <div class="row1_title" style="align-content: flex-start;flex-basis: 100%; " >
+                        <p style="border-bottom:wheat solid 2px;width: 100%;"> 오늘의 화제작</p>
                     </div>
-                </li>
-              </ul>
+                    <div class="row-item">
+                     <div class="card" id="card">
+                        <div class="card-header">
+                            <div class="card-header-is-closed">
+                                <div class="card-header-text">상영중</div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-bdoy-header">
+                                <h1>그을린 사랑</h1>
+                                <p class="card-body-nickname">감독 : 드뇌 빌뇌브</p>
+                            </div>
+                            <p class="card-body-description">드뇌 빌뇌브의 그을린 사랑 재개봉</p>
+                            <div class="card-body-footer">
+                                <hr style="margin-bottom: 8px; opacity: 0.5; border-color: #EF5A31">
+                                <i class="icon icon-view_count"></i>조 회 38회
+                                <i class="icon icon-comments_count"></i>댓글 4개
+                                <i class="reg_date"> 2018/04/12 </i>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="card" >
+                        <div class="card-header">
+                            <div class="card-header-is-closed">
+                                <div class="card-header-text">상영중</div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-bdoy-header">
+                                <h1>그을린 사랑</h1>
+                                <p class="card-body-nickname">감독 : 드뇌 빌뇌브</p>
+                            </div>
+                            <p class="card-body-description">드뇌 빌뇌브의 그을린 사랑 재개봉</p>
+                            <div class="card-body-footer">
+                                <hr style="margin-bottom: 8px; opacity: 0.5; border-color: #EF5A31">
+                                <i class="icon icon-view_count"></i>조 회 38회
+                                <i class="icon icon-comments_count"></i>댓글 4개
+                                <i class="reg_date"> 2018/04/12 </i>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="card" >
+                        <div class="card-header">
+                            <div class="card-header-is-closed">
+                                <div class="card-header-text">상영중</div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-bdoy-header">
+                                <h1>그을린 사랑</h1>
+                                <p class="card-body-nickname">감독 : 드뇌 빌뇌브</p>
+                            </div>
+                            <p class="card-body-description">드뇌 빌뇌브의 그을린 사랑 재개봉</p>
+                            <div class="card-body-footer">
+                                <hr style="margin-bottom: 8px; opacity: 0.5; border-color: #EF5A31">
+                                <i class="icon icon-view_count"></i>조 회 38회
+                                <i class="icon icon-comments_count"></i>댓글 4개
+                                <i class="reg_date"> 2018/04/12 </i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-bbs">
+                    <div class="testi">
+                        <img src="shazam.jpg" alt="샤잠!" width="150px;" height="150px">
+                        <p><span>Rebecca Flex.</span> CEO at Company.</p>
+                        <p>No one is better than John Doe.</p>
+                    </div>
+                    <div class="testi">
+                        <img src="shazam.jpg" alt="샤잠!" width="150px;" height="150px">
+                        <p><span>Rebecca Flex.</span> CEO at Company.</p>
+                        <p>No one is better than John Doe.</p>
+                    </div>
+                </div>
+                <div style="position: relative; max-width: 100%; padding-bottom: 56.25%; height: 0;">
+
+                    <iframe width="320" height="180" src="https://www.youtube.com/embed/t433PEQGErc" frameborder="0" allowfullscreen="" style="position: absolute; position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+                    
+                    </div>
+                </section>
           </article>
-          <style>
-            #content{
-              padding: 40px 0 50px;
-              min-height: 670px;
-              width: 960px;
-              margin: auto;
-            }
-            #content.multi.photodata .coverdata {
-                overflow: hidden;
-                margin-left: -30px;
-                }
-                ul, menu, dir {
-                  display: block;
-                  list-style-type: disc;
-                  margin-block-start: 1em;
-                  margin-block-end: 1em;
-                  margin-inline-start: 0px;
-                  margin-inline-end: 0px;
-                  padding-inline-start: 40px;
-              }
-              li{
-                display: list-item;
-                position: relative;
-                float: left;
-                margin: 0 0 30px 30px;
-                width: 300px;
-              }
-              a:link{
-                text-decoration: none;
-                color: black;
-              }
-              #content.multi.photodata .coverdata li .thumb {
-              display: block;
-              width: 300px;
-              height: 360px;
-                }
-                img {
-                border: 0px;
-                vertical-align: top;
-              }
-           .tit_box {
-    border: 1px solid #e3e3e3;
-    padding: 7px 12px 0 13px;
-    height: 103px;
-}
- .ho_num {
-    font-weight: bold;
-    color: #000;
-    font-size: 25px;
-    border-bottom: 1px solid #efefef;
-    padding-bottom: 7px;
-    margin-bottom: 10px;
-    
-}
-#content.multi.photodata .coverdata li .tit_box .date {
-    font-size: 12px;
-    font-weight: normal;
-    color: #888;
-    margin-bottom: 3px;
-}
- .coverpeople {
-    font-size: 12px;
-    color: #888;
-    margin-bottom: 7px;
-    font-size: 12px;
-}
-div{
-  font-size: 14px;
-    color: #545454;
-}
-          </style>
         </div>
 
+        <!-- 테스티 스타일 -->
+        <style>
+        
+        .row-bbs{
+            flex-direction: column;
+        }
+        .testi {
+            border: 2px solid #ccc;
+            background-color: #eee;
+            border-radius: 5px;
+            padding: 16px;
+            margin: 16px 0
+          }
+          
+          .testi::after {
+            content: "";
+            clear: both;
+            display: table;
+          }
+          
+          .testi img {
+            float: left;
+            margin-right: 20px;
+            border-radius: 50%;
+          }
+          
+          .testi span {
+            font-size: 20px;
+            margin-right: 15px;
+          }
+          @media (max-width: 500px) {
+ 
+        .testi {
+            text-align: center;
+        }
+        .testi img {
+            margin: auto;
+            float: none;
+            display: block;
+        }
+        }
+     
+        </style>
+          <!--테스티 스타일 -->
+        <!-- 카드뷰 스타일 -->
+        <style>
 
-          <footer class="footer">
-            <h2>Footer</h2>
-          </footer>
+            
+
+        .row-item{
+            display: flex;
+            justify-content: space-around; 
+        }
+
+         .card {
+            height: 300px;
+            width: 250px;
+            border-radius: 15px;
+            display: inline-block;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            position: relative;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            overflow: hidden;
+        }
+
+         .card-header {
+            transition: 0.5s;
+            width: 100%;
+            height: 200px;
+            border-radius: 15px 15px 0 0;
+            background-image: url("sabaha.jpg");
+            background-size: 100% 280px;
+            background-repeat: no-repeat;	
+        }
+
+        .card:hover .card-header  {
+            opacity: 0.8;
+            height: 100px;
+        }
+        .card-header-is-closed{
+            
+            background-color: #EF5A31 ;
+            color: #FFF ;
+            font-weight: bold ;
+            text-align: center ;
+            float: right;
+            margin: 15px 15px 0 0;
+            border-radius: 50%;
+            font-weight: bold;
+            padding: 10px 10px;
+            line-height: 20px;
+        }
+
+        h1 {
+            
+            font-size: 22px;
+        
+            font-weight: bold;
+        
+        }
+        
+        .card-body-header{
+        
+            line-height: 25px;
+        
+            margin: 10px 20px 0px 20px;
+        
+        }
+        
+        
+        
+        .card-body-description{
+            opacity: 0;
+            color: #757B82;
+            line-height: 25px;
+            overflow: hidden;
+            height: 180px;
+            margin: 5px 20px;
+        }
+        
+        
+        
+        .card:hover .card-body-description {
+            opacity: 1;
+            transition : .5s ease-in-out;
+            overflow: auto;
+        }
+        
+        .card-body-footer {
+            position: absolute; 
+            margin-top: 15px;
+            margin-bottom: 6px;
+            bottom: 0; 
+        
+            width: 100%;
+        
+            font-size: 14px;
+        
+            color: #9FA5A8;
+        
+            padding: 0 10px;
+        
+        }
+        
+        
+        
+        .icon {
+        
+            display: inline-block;
+        
+            vertical-align: middle;
+        
+            margin-right: 2px;
+        
+        }
+        
+        
+        
+        .icon-view_count {
+        
+            width: 25px;
+        
+            height: 17px;
+        
+            background: url("images/eye.jpg") no-repeat;
+        
+        }
+        
+        
+        
+        .icon-comments_count {
+        
+            margin-left: 5px;
+        
+            width: 25px;
+        
+            height: 17px;
+        
+            background: url("images/comment.jpg") no-repeat;	
+        
+        }
+        
+        
+        
+        .reg_date {
+        
+            float: right;
+        
+        }
+        
+        </style>
+        <!-- 카드뷰 스타일 -->
+        <footer class="footer">
+        <h2>Footer</h2>
+        </footer>
 
              
         <script>
