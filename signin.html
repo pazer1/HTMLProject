@@ -101,23 +101,40 @@
                     width: 960px;
                     margin: auto;
                 }
+                .container{
+                    font-size: 0.9em
+                }
                 ul{
                     list-style: none;
+                    border-bottom: 1px dotted darkred;
                 }
-                h3{
-                    height: 50px;
-                    margin-left: 30px;
-                    margin-top: 30px;
+                li{
+                    height: 40px;
+                    background-color: beige;
+                    border: 1px dotted darkred;
+                    border-bottom: 0px;
+                }
+                #title{
+                    height: 90px;
+                    padding: 30px;
+                    font-size: 2.2em;
+                    font-weight: bold;
                 }
                 .floated{
                     float: left;
                     margin-right: 10px;
-                    width: 250px;
-                    height: 50px;
-                    padding: 5px;
+                    width: 220px;
+                    height: 40px;
+                    padding: 10px;
                     text-align: right;
-                    background-color: burlywood;
-                    border: 1px dotted red;
+                    background-color: bisque;
+                    border-right: 1px dotted darkred;
+                    border-bottom: 1px dotted darkred;
+                    font-weight: bold;
+                }
+                .inputs{
+                    height: 40px;
+                    padding: 10px;
                 }
                 .textbox{
                     width: 120px;
@@ -128,53 +145,75 @@
                     border-bottom: 1px solid #d8d8d8;
                     vertical-align: middle;
                 }
-                li{
-                    height: 50px;
-                    background-color: beige;
-                    border: 1px dotted red;
+                .phonenum{
+                    width: 40px;
+                    height: 20px;
+                    padding: 2px 2px 0 2px;
+                    border: 1px solid #9a9a9a;
+                    border-right: 1px solid #d8d8d8;
+                    border-bottom: 1px solid #d8d8d8;
+                    vertical-align: middle;
                 }
                 #signIn{
                     float: right;
-                    border: 1px dotted red;
+                    margin-bottom: 15px;
                 }
                 #finalButton{
-                    size: 50px;
+                    width:100px;
+                    background-color: darkred;
+                    border: none;
+                    color:#fff;
+                    padding: 10px 0;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: 15px;
+                    font-weight: bold;
+                    cursor: pointer;
                 }
             </style>
-            <h3>회원가입</h3>
+            <p id="title">회원가입</p>
 
             <ul>
                 <li>
                     <div class="floated">아이디</div>
-                    <div><input class="textbox" type="text"> <button>아이디 중복</button> <br> </div>
+                    <div class="inputs"><input class="textbox" type="text"> <button>아이디 중복</button>
+                    중복되지 않은 아이디입니다</div>
                 </li>
                 <li>
                     <div class="floated">닉네임</div>
-                    <div><input class="textbox" type="text"> <button>닉네임 중복</button> <br> </div>
+                    <div class="inputs"><input class="textbox" type="text"> <button>닉네임 중복</button>
+                    중복되지 않은 닉네임입니다</div>
                 </li>
                 <li>
                     <div class="floated">비밀번호</div>
-                    <div><input class="textbox" type="password"> <br> </div>
+                    <div class="inputs"><input class="textbox" type="password">
+                    10자 이상 입력해 주세요</div>
                 </li>
                 <li>
                     <div class="floated">비밀번호 확인</div>
-                    <div><input class="textbox" type="password"> <button>비밀번호 확인</button> <br> </div>
+                    <div class="inputs"><input class="textbox" type="password">
+                    비밀번호가 일치하지 않습니다</div>
                 </li>
                 <li>
                     <div class="floated">이메일</div>
-                    <div><input class="textbox" type="text"> @ 
+                    <div class="inputs"><input class="textbox" type="text"> @ 
                         <select name="mail">
                             <option value="">naver.com</option>
                             <option value="">google.com</option>
                             <option value="">hanmail.net</option>
                             <option value="">nate.com</option>
                             <option value="" onselect="">직접 입력</option>
-                        </select> <input type="text" disabled> <br>
+                        </select> <input type="text" disabled>
                     </div>
+                </li>
+                <li>
+                    <div class="floated">전화번호</div>
+                    <div class="inputs"><input class="phonenum" type="number">-<input class="phonenum" type="number">-<input class="phonenum" type="number"> </div>
                 </li>
             </ul>
 
-            <div style="margin-left:150px;"><input class="checkbox" type="checkbox"> 뉴스레터를 수신하겠습니다</div>
+            <div style="margin-left:150px; margin-top: 10px;"><input class="checkbox" type="checkbox"> 이메일로 뉴스레터를 수신하겠습니다</div>
             
             <div id="signIn"><button id="finalButton">가입하기</button></div>
 
