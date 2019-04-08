@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title>Moviewer</title>
+
+
+        <link rel="stylesheet" href="index.css">
+
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    </head>
+
+    <body>
+    <header>
+            <div id="hgroup">
+                <h1><a href="index.html">C<span>oncept</span> C<span>lean</span></a></h1>
+                <h2>Free Website Template</h2>
+            </div>
+            <div class="header-container">
+                <nav class="main-menu">
+                    <div class="dropdown-wrapper menu-button">		
+                        <a class="menu-button" href="#">현재 상영작</a>
+                            
+                    </div>
+                    
+                    <div class="dropdown-wrapper menu-button">		
+                        <a class="menu-button" href="#">사이트 소개</a>
+                    </div>
+            
+                    <div class="dropdown-wrapper menu-button">		
+                        <a class="menu-button" href="#" >영화리뷰</a>
+                            
+                        <div class="drop-menu">
+                            
+                            <a class="menu-button" href="#">한국 영화</a>
+                            <a class="menu-button" href="#">서양 영화</a>
+                            <a class="menu-button" href="#">애니메이션</a>
+                            
+                            
+                        </div>
+                    </div>
+            
+                    <div class="dropdown-wrapper menu-button">
+                            
+                        <a class="menu-button" href="#" >Contact</a>
+                            
+                        <div class="drop-menu">
+                            <a class="menu-button" href="#">고객건의</a>
+                            <a class="menu-button" href="#">sample</a>
+                            <a class="menu-button" href="#">sample</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div class="sildImg">
+            <img class="mySlides" src="sabaha.jpg">
+            <img class="mySlides" src="shazam.jpg">
+            <img class="mySlides" src="movieus.jpg">
+            <!-- 아이콘으로 변경 -->
+            <a class="slidBtn_left" style="position:absolute;top:45%;left:20px;color: white;" onclick="plusDivs(-1)">❮</a>
+            <a class="slidBtn_right" style="position:absolute;top:45%;right:20px;color:white;" onclick="plusDivs(1)">❯</a>
+        </div>
+
+
+        <div class="content">
+          <article id="article">
+                <section class="row1">
+                    <div class="row1_title">
+                        <!-- TODO : 여기부터 -->
+                        <p id="hr-todayfilm"> 오늘의 화제작</p>
+                    </div>
+                    <div class="row-item">
+                     <div class="card" id="card">
+                        <div class="card-header">
+                            <div class="card-header-is-closed">
+                                <div class="card-header-text">상영중</div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-bdoy-header">
+                                <h1>그을린 사랑</h1>
+                                <p class="card-body-nickname">감독 : 드뇌 빌뇌브</p>
+                            </div>
+                            <p class="card-body-description">드뇌 빌뇌브의 그을린 사랑 재개봉</p>
+                            <div class="card-body-footer">
+                            </div>
+                        </div>
+                    </div>
+                     <div class="card" >
+                        <div class="card-header">
+                            <div class="card-header-is-closed">
+                                <div class="card-header-text">상영중</div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-bdoy-header">
+                                <h1>그을린 사랑</h1>
+                                <p class="card-body-nickname">감독 : 드뇌 빌뇌브</p>
+                            </div>
+                            <p class="card-body-description" >드뇌 빌뇌브의 그을린 사랑 재개봉</p>
+                            <div class="card-body-footer">
+                          
+                            </div>
+                        </div>
+                    </div>
+                     <div class="card" >
+                        <div class="card-header">
+                            <div class="card-header-is-closed">
+                                <div class="card-header-text">상영중</div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-bdoy-header">
+                                <h1>그을린 사랑</h1>
+                                <p class="card-body-nickname">감독 : 드뇌 빌뇌브</p>
+                            </div>
+                            <p class="card-body-description">드뇌 빌뇌브의 그을린 사랑 재개봉</p>
+                            <div class="card-body-footer">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-bbs">
+                    <div class="testi">
+                        <img src="shazam.jpg" alt="샤잠!" width="150px;" height="150px">
+                        <p><span>Rebecca Flex.</span> CEO at Company.</p>
+                        <p>No one is better than John Doe.</p>
+                    </div>
+                    <div class="testi">
+                        <img src="shazam.jpg" alt="샤잠!" width="150px;" height="150px">
+                        <p><span>Rebecca Flex.</span> CEO at Company.</p>
+                        <p>No one is better than John Doe.</p>
+                    </div>
+                </div>
+                <div style="position: relative; max-width: 100%; padding-bottom: 56.25%; height: 0;">
+                    <iframe width="320" height="180" src="https://www.youtube.com/embed/t433PEQGErc" frameborder="0" allowfullscreen="" style="position: absolute; position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>    
+                </div>
+                <hr>
+                <hr>
+                <div class="container" style="border:1px solid red; width:100%; height:100%;">
+                    <div class="row flexbox-center">
+                        <div class=" text-center text-lg-right" style="width:100%">
+                            <div class="portfolio-menu">
+                                <ul>
+                                    <li data-filter="*" class="active">Latest</li>
+                                    <li data-filter=".soon">Comming Soon</li>
+                                    <li data-filter=".top">Top Rated</li>
+                                    <li data-filter=".released">Recently Released</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-lg-9">
+                            <div class="row portfolio-item" style="border:1px solid red">
+                                <div class="col-md-4 col-sm-6 soon released">
+                                    <div class="single-portfolio">
+                                        <div class="single-portfolio-img">
+                                            <img src="portfolio2.png" alt="hero">
+                                            <a href="https://www.youtube.com/watch?v=RZXnugbhw_4" class="popup-youtube">
+                                                <i class="icofont icofont-ui-play">PLAY</i>
+                                            </a>
+                                        </div>
+                                        <div class="portfolio-content">
+                                            <h2>Brand</h2>
+                                            <div class="review"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 soon released">
+                                    <div class="single-portfolio">
+                                        <div class="single-portfolio-img">
+                                            <img src="portfolio2.png" alt="hero">
+                                            <a href="https://www.youtube.com/watch?v=RZXnugbhw_4" class="popup-youtube">
+                                                <i class="icofont icofont-ui-play">PLAY</i>
+                                            </a>
+                                        </div>
+                                        <div class="portfolio-content">
+                                            <h2>Brand</h2>
+                                            <div class="review"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </section>
+          </article>
+        </div>
+        <hr>
+        
+        <!-- 포트폴리오 스타일 -->
+      
+        <!-- 포트폴리오 스타일 -->
+        <style>
+
+
+        </style>
+
+        <style>
+ 
+          /* @media (max-width: 500px) {
+ 
+        .testi {
+            text-align: center;
+        }
+        .testi img {
+            margin: auto;
+            float: none;
+            display: block;
+        }
+        } */
+     
+        </style>
+          <!--테스티 스타일 -->
+        <!-- 카드뷰 스타일 -->
+      
+        <!-- 카드뷰 스타일 -->
+        <footer class="footer">
+        <h2>Footer</h2>
+        </footer>
+
+      
+    </body>
+    <script src="index.js"></script>
+</html>
