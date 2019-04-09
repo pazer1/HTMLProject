@@ -106,19 +106,22 @@
                 }
                 ul{
                     list-style: none;
-                    border-bottom: 1px dotted darkred;
+                    border-bottom: 1px solid darkred;
                 }
                 li{
                     height: 40px;
                     background-color: beige;
-                    border: 1px dotted darkred;
+                    border: 1px solid darkred;
                     border-bottom: 0px;
                 }
-                #title{
+                .title{
                     height: 90px;
-                    padding: 30px;
                     font-size: 2.2em;
                     font-weight: bold;
+                    padding: 25px;
+                    margin: 10px 0px;
+                    color: white;
+                    background-color: burlywood;
                 }
                 .floated{
                     float: left;
@@ -128,8 +131,8 @@
                     padding: 10px;
                     text-align: right;
                     background-color: bisque;
-                    border-right: 1px dotted darkred;
-                    border-bottom: 1px dotted darkred;
+                    border-right: 1px solid darkred;
+                    border-bottom: 1px solid darkred;
                     font-weight: bold;
                 }
                 .inputs{
@@ -172,7 +175,8 @@
                     cursor: pointer;
                 }
             </style>
-            <p id="title">회원가입</p>
+            <div class="title"><p>회원가입</p></div>
+            
 
             <ul>
                 <li>
