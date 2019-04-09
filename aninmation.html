@@ -127,8 +127,7 @@
           display: flex;
         }
        
-    
-        
+       
         @media (max-width: 600px) {
     
           .header-container {
@@ -137,10 +136,11 @@
           }
          .row{
            flex-direction: column;
-          justify-content: space-between;
+          justify-content: center;
           
         }
         .card{
+          
           justify-content: space-between;
         }
        
@@ -184,6 +184,24 @@
           
         }
      
+
+     .scale {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transition: all 0.3s ease-in-out;   /* 부드러운 모션을 위해 추가*/
+}
+  .scale:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  }
+
+  
         </style>
         
     </head>
@@ -239,9 +257,9 @@
               <!-- 여기서 아이템 들어 가는곳 -->
              
               <div class="container mt-3">
-                  <div class="row" style="margin-top: 80px; margin-left:10px; ">
-                      <div class="card ml-5 mt-5" style="width: 15rem">
-      
+                  <div class="row " style="margin-top: 80px; margin-left:10px; ">
+                      <div class=" card ml-5 mt-5  scale" style="width: 15rem">
+                          
                           <img src="./ani_imges/img01.jpg" alt="moana01" class="card-img-top">
       
                           <div class="card-body">
@@ -250,7 +268,7 @@
                               <a href="" class="btn btn-primary">Go review page</a>
                           </div>
                       </div>
-                      <div class="card ml-5 mt-5" style="width: 15rem">
+                      <div class="card ml-5 mt-5 scale" style="width: 15rem">
       
                           <img src="./ani_imges/img02.jpg" alt="moana02" class="card-img-top">
       
@@ -261,7 +279,7 @@
                           </div>
                       </div>
       
-                      <div class="card ml-5 mt-5" style="width: 15rem">
+                      <div class="card ml-5 mt-5 scale" style="width: 15rem">
       
                               <img src="./ani_imges/img03.jpg" alt="moana02" class="card-img-top">
           
@@ -271,106 +289,101 @@
                                   <a href="" class="btn btn-primary">Go review page</a>
                               </div>
                           </div>
-                       
-                  </div>
-                  <div class="row" style="margin-top: 8=40px; margin-left:10px; ">
-                      <div class="card ml-5 mt-5 " style="width: 15rem">
+                          <div class="card ml-5 mt-5 scale " style="width: 15rem">
       
-                          <img src="./ani_imges/img04.jpg" alt="moana01" class="card-img-top">
-      
-                          <div class="card-body"class="card_left">
-                              <h5 class="card-title">너의 이름은</h5>
-                              <p class="card-text">아직 만난 적 없는 너를 찾고 있어..</p>
-                              <a href="" class="btn btn-primary">Go review page</a>
-                          </div>
-                      </div>
-                      <div class="card ml-5 mt-5" style="width: 15rem">
-      
-                          <img src="./ani_imges/img05.jpg" alt="moana02" class="card-img-top">
-      
-                          <div class="card-body">
-                              <h5 class="card-title">루돌프와 많이있어</h5>
-                              <p class="card-text">루돌프는 과연 집으로 돌아갈 수 있을까요?</p>
-                              <a href="" class="btn btn-primary">Go review page</a>
-                          </div>
-                      </div>
-      
-                      <div class="card ml-5 mt-5" style="width: 15rem">
-      
-                              <img src="./ani_imges/img06.jpg" alt="moana02" class="card-img-top">
+                              <img src="./ani_imges/img04.jpg" alt="moana01" class="card-img-top">
           
-                              <div class="card-body">
-                                  <h5 class="card-title">씽</h5>
-                                  <p class="card-text">꿈의 오디션이 시작된다.</p>
+                              <div class="card-body"class="card_left">
+                                  <h5 class="card-title">너의 이름은</h5>
+                                  <p class="card-text">아직 만난 적 없는 너를 찾고 있어..</p>
                                   <a href="" class="btn btn-primary">Go review page</a>
                               </div>
                           </div>
-                       
-                  </div>
-                  <div class="row" style="margin-top: 40px; margin-left:10px; ">
-                      <div class="card ml-5 mt-5 " style="width: 15rem">
-      
-                          <img src="./ani_imges/img07.jpg" alt="moana01" class="card-img-top">
-      
-                          <div class="card-body" class="card_left">
-                              <h5 class="card-title">서울역</h5>
-                              <p class="card-text">모든것이 이곳에서 시작된다!!</p>
-                              <a href="" class="btn btn-primary">Go review page</a>
-                          </div>
-                      </div>
-                      <div class="card ml-5 mt-5" style="width: 15rem">
-      
-                          <img src="./ani_imges/img08.jpg" alt="moana02" class="card-img-top">
-      
-                          <div class="card-body">
-                              <h5 class="card-title">앵그리버드 더 무비</h5>
-                              <p class="card-text">화내지마~~!!!!</p>
-                              <a href="" class="btn btn-primary">Go review page</a>
-                          </div>
-                      </div>
-      
-                      <div class="card ml-5 mt-5" style="width: 15rem">
-      
-                              <img src="./ani_imges/img09.jpg" alt="moana02" class="card-img-top">
+                          <div class="card ml-5 mt-5 scale" style="width: 15rem">
+          
+                              <img src="./ani_imges/img05.jpg" alt="moana02" class="card-img-top">
           
                               <div class="card-body">
-                                  <h5 class="card-title">주토피아</h5>
-                                  <p class="card-text">재미지겠ZOO??</p>
+                                  <h5 class="card-title">루돌프와 많이있어</h5>
+                                  <p class="card-text">루돌프는 과연 집으로 돌아갈 수 있을까요?</p>
                                   <a href="" class="btn btn-primary">Go review page</a>
                               </div>
                           </div>
-                       
-                  </div>
-
-
-                 
-            <!-- 게시판형식  -->
-            <div class="container-fluid" style=" background-color: red; display: flex; justify-content: center" >
-
-                <ul class="pagination justify-content-center" style="margin-top: 20px;"  >
-                    <li class="page-item"><a href="" class="page-link">1</a></li>
-                    <li class="page-item"><a href="" class="page-link">2</a></li>
-                    <li class="page-item"><a href="" class="page-link">3</a></li>
-                    <li class="page-item"><a href="" class="page-link">4</a></li>
-                    <li class="page-item"><a href="" class="page-link">5</a></li>
-                </ul>
           
-
-             </div>
-              </div>
-
+                          <div class="card ml-5 mt-5 scale" style="width: 15rem">
           
-           
+                                  <img src="./ani_imges/img06.jpg" alt="moana02" class="card-img-top">
               
-            </article>
-        
-            
+                                  <div class="card-body">
+                                      <h5 class="card-title">씽</h5>
+                                      <p class="card-text">꿈의 오디션이 시작된다.</p>
+                                      <a href="" class="btn btn-primary">Go review page</a>
+                                  </div>
+                                </div>
+
+
+                                <div class="card ml-5 mt-5 scale " style="width: 15rem">
+      
+                                    <img src="./ani_imges/img07.jpg" alt="moana01" class="card-img-top">
+                
+                                    <div class="card-body" class="card_left">
+                                        <h5 class="card-title">서울역</h5>
+                                        <p class="card-text">모든것이 이곳에서 시작된다!!</p>
+                                        <a href="" class="btn btn-primary">Go review page</a>
+                                    </div>
+                                </div>
+                                <div class="card ml-5 mt-5 scale" style="width: 15rem">
+                
+                                    <img src="./ani_imges/img08.jpg" alt="moana02" class="card-img-top">
+                
+                                    <div class="card-body">
+                                        <h5 class="card-title">앵그리버드 더 무비</h5>
+                                        <p class="card-text">화내지마~~!!!!</p>
+                                        <a href="" class="btn btn-primary">Go review page</a>
+                                    </div>
+                                </div>
+                
+                                <div class="card ml-5 mt-5 scale" style="width: 15rem">
+                
+                                        <img src="./ani_imges/img09.jpg" alt="moana02" class="card-img-top">
+                    
+                                        <div class="card-body">
+                                            <h5 class="card-title">주토피아</h5>
+                                            <p class="card-text">재미지겠ZOO??</p>
+                                            <a href="" class="btn btn-primary">Go review page</a>
+                                        </div>
+                                    </div>
+                                 
+
+                  </div>
                
 
-            
+                 
            
+              </div>
+
+
+
+
+              
+            </article>
+      
 
         </div>
+        
+          <!-- 게시판형식  -->
+          <div class="container-fluid" style=" display: flex; justify-content: center" >
+
+              <ul class="pagination justify-content-center" style="margin-top: 20px;"  >
+                  <li class="page-item"><a href="" class="page-link">1</a></li>
+                  <li class="page-item"><a href="" class="page-link">2</a></li>
+                  <li class="page-item"><a href="" class="page-link">3</a></li>
+                  <li class="page-item"><a href="" class="page-link">4</a></li>
+                  <li class="page-item"><a href="" class="page-link">5</a></li>
+              </ul>
+        
+
+           </div>
         
 
 
