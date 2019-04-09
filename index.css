@@ -116,10 +116,11 @@
 #hr-todayfilm{
     border: black solid 2px;
     width: 100%;
+    color: white;
     background: #000000;
 }
 
-footer{
+.footer{
         height: 55px;
         background-color:#ddd; 
         display: flex;
@@ -133,7 +134,11 @@ footer{
 /* 카드레이아웃 스타일 */
 .row-item{
     display: flex;
-    justify-content: space-around; 
+    justify-content: space-around;
+    
+}
+.row-imgs{
+    flex-wrap: wrap;
 }
  .card {
     height: 300px;
@@ -231,21 +236,22 @@ footer{
 .portfolio-menu {
 	    padding-top: 30px;
         text-align: center;
-        padding: 20px;
+        padding: 10px;
+        width: 100%;
         }
 
-        .portfolio-menu ul{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            width: 100%;
-        }
+    .portfolio-menu ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
 
 .portfolio-menu li {
     display: inline-block;
     position: relative;
     margin-left: 15px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     cursor: pointer;
 }
 
@@ -261,6 +267,7 @@ footer{
     z-index: 99;
 }
 
+
 .portfolio-menu li.active {
     color: red;
 }
@@ -272,8 +279,18 @@ footer{
     margin-top: 20px;
 }
 
+.row-imgs{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
 .single-portfolio {
     margin-top: 50px;
+    display: none;
+}
+.show{
+    display: inline-block;
 }
 .video-area,
 .single-portfolio-img {
