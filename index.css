@@ -172,7 +172,7 @@
 	line-height:57px;
 	text-align:center;
 	cursor:pointer;	
-	background:rgba(0,0,0,0.1);
+	background:white;
 	z-index:100;
 	
 	
@@ -230,8 +230,6 @@
 	opacity:0.5;
 	position:relative;
     top:0;
-  
-  
 }
 
 #pagination-wrap ul li.active{
@@ -283,6 +281,7 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
 .row-bbs-title{
     background: rgb(36, 34, 34);
     padding-bottom:10px; 
+    border-radius: 10px;
 }
 
 #hr-todayfilm {
@@ -290,6 +289,8 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
     width: 100%;
     color: white;
     background: rgb(36, 34, 34);
+    border-radius: 10px;
+ 
 }
 
 .footer{
@@ -404,11 +405,20 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
 	margin: 0;
 	border-top: 1px solid #ddd;
     }
+
+.container{
+    background: rgb(36, 34, 34);
+    border-radius: 10px;
+}
+
+
 .portfolio-menu {
 	    padding-top: 30px;
         text-align: center;
         padding: 10px;
         width: 100%;
+        background: black;
+        border-radius: 10px
         }
 
     .portfolio-menu ul{
@@ -420,10 +430,12 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
 
 .portfolio-menu li {
     display: inline-block;
+  
     position: relative;
     margin-left: 15px;
     padding-bottom: 10px;
     cursor: pointer;
+    color: white;
 }
 
 .portfolio-menu li::before {
@@ -452,13 +464,16 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
 
 .row-imgs{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
+    height: 1428px;
     
 }
 
 .single-portfolio {
     margin-top: 50px;
     display: none;
+    margin-left: 55px;
+    height: 300px;
 }
 .show{
     display: inline-block;
