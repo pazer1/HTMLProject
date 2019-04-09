@@ -90,7 +90,7 @@
 .dropdown-wrapper:hover .drop-menu{
   max-height: 300px;  
   opacity: 1;
-}
+} 
 
 .dropdown-wrapper:hover > .drop-menu .menu-button {
   transform: translateY(0%); 
@@ -107,6 +107,7 @@
 
 
 #wrapper{
+    max-width: 1980px;
 	width:980px;
 	margin:auto;
 	height:500px;
@@ -208,7 +209,7 @@
 /*bar*/
 #pagination-wrap{
 	min-width:20px;
-	margin-top:350px;
+	margin-top:450px;
 	margin-left: auto; 
 	margin-right: auto;
 	height:15px;
@@ -258,9 +259,15 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
 
 #article{
     max-width: 1980px;
-    width: 980px;
+    width: 1200px;
     margin: auto;
     display: flex;
+}
+@media (min-width:1980px){
+    #article{
+        width: 70%;
+        background: red;
+    }
 }
 
 #hr-todayfilm,.row-bbs-title p{
