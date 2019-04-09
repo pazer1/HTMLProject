@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, user-scalable=no">
         <title>Moviewer</title>
 
-
         <link rel="stylesheet" href="index.css">
         <link rel="stylesheet" href="magnific-popup.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -57,13 +56,63 @@
                 </nav>
             </div>
         </header>
-        <div class="sildImg">
-            <img class="mySlides" src="sabaha.jpg">
-            <img class="mySlides" src="shazam.jpg">
-            <img class="mySlides" src="movieus.jpg">
-            <!-- 아이콘으로 변경 -->
-            <a class="slidBtn_left" style="position:absolute;top:45%;left:20px;color: white;" onclick="plusDivs(-1)">❮</a>
-            <a class="slidBtn_right" style="position:absolute;top:45%;right:20px;color:white;" onclick="plusDivs(1)">❯</a>
+          
+        <div id="wrapper">
+                <div id="slider-wrap">
+                <ul id="slider">
+                    <li data-color="#1abc9c">
+                    <div>
+                        <h3>조커</h3>
+                        <span>돌아온 광기</span>
+                    </div>                
+                        <img src="./Images/maxresdefault.jpg">
+                    </li>
+                    <li data-color="#3498db">
+                    <div>
+                        <h3>샤잠!</h3>
+                        <span>DC부활의 신호탄?</span>
+                    </div>
+                     <img src="./Images/shazam.jpg">
+                    </li>
+                    
+                    <li data-color="#9b59b6">
+                    <div>
+                        <h3>사바하</h3>
+                        <span>신비로운 종교 영화</span>
+                    </div>
+                    <img src="./Images/sabaha.jpg">
+                    </li>
+                    
+                    <li data-color="#34495e">
+                    <div>
+                        <h3>어스</h3>
+                        <span>새로운 공포가 찾아온다</span>
+                    </div>
+                    <img src="./Images/movieus.jpg">
+                    </li>
+                    
+                    <li data-color="#e74c3c">
+                    <div>
+                        <h3>돈돈돈</h3>
+                        <span>돈으로 만든 영화</span>
+                    </div>
+                    <img src="./Images/moview-money.jpg">
+                    </li>
+                </ul>
+                
+                <!--controls-->
+                <div class="btns" id="next"><i class="fa fa-arrow-right"></i></div>
+                <div class="btns" id="previous"><i class="fa fa-arrow-left"></i></div>
+                <div id="counter"></div>
+                
+                <div id="pagination-wrap">
+                <ul>
+                </ul>
+                </div>
+                <!--controls-->  
+                        
+            </div>
+        
         </div>
 
 
@@ -76,80 +125,86 @@
                     </div>
                     <div class="row-item">
                      <div class="card" id="card">
-                        <div class="card-header">
-                            <div class="card-header-is-closed">
+                        <div class="card-header" style="background-image:url(./Images/incidence.jpg)">
+                            <div class="card-header-is-closed" style="background-color:rgb(206, 151, 151)">
                                 <div class="card-header-text">상영중</div>
                             </div>
                         </div>
                         <div class="card-body">
                             <div class="card-bdoy-header">
                                 <h1>그을린 사랑</h1>
-                                <p class="card-body-nickname">감독 : 드뇌 빌뇌브</p>
+                                <p class="card-body-nickname">돌아온 명작</p>
                             </div>
-                            <p class="card-body-description">드뇌 빌뇌브의 그을린 사랑 재개봉</p>
+                            <p class="card-body-description">드뇌 빌뇌브의 명작 그을린 사랑이 재개봉을 한다.</p>
                             <div class="card-body-footer">
                             </div>
                         </div>
                     </div>
                      <div class="card" >
-                        <div class="card-header">
+                        <div class="card-header" style="background-image:url(./Images/toy-story4.jpg)">
                             <div class="card-header-is-closed">
-                                <div class="card-header-text">상영중</div>
+                                <div class="card-header-text">개봉예정</div>
                             </div>
                         </div>
                         <div class="card-body">
-                            <div class="card-bdoy-header">
-                                <h1>그을린 사랑</h1>
-                                <p class="card-body-nickname">감독 : 드뇌 빌뇌브</p>
+                            <div class="card-bdoy-header" >
+                                <h1>토이스토리 4</h1>
+                                <p class="card-body-nickname">다시한번 동심으로</p>
                             </div>
-                            <p class="card-body-description" >드뇌 빌뇌브의 그을린 사랑 재개봉</p>
+                            <p class="card-body-description" >새롭게 돌아온 토이 스토리4</p>
                             <div class="card-body-footer">
                           
                             </div>
                         </div>
                     </div>
                      <div class="card" >
-                        <div class="card-header">
+                        <div class="card-header" style="background-image:url(./Images/avengers.jpg)">
                             <div class="card-header-is-closed">
-                                <div class="card-header-text">상영중</div>
+                                <div class="card-header-text">개봉예정</div>
                             </div>
                         </div>
                         <div class="card-body">
                             <div class="card-bdoy-header">
-                                <h1>그을린 사랑</h1>
-                                <p class="card-body-nickname">감독 : 드뇌 빌뇌브</p>
+                                <h1>어벤져스 엔드게임</h1>
+                                <p class="card-body-nickname">마지막 싸움</p>
                             </div>
-                            <p class="card-body-description">드뇌 빌뇌브의 그을린 사랑 재개봉</p>
+                            <p class="card-body-description">어벤져스의 운명은!</p>
                             <div class="card-body-footer">
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row-bbs">
+                    <div class="row-bbs-title">
+                        <p >오늘의 영화인</p>
                     <div class="testi">
-                        <img src="shazam.jpg" alt="샤잠!" width="150px;" height="150px">
-                        <p><span>Rebecca Flex.</span> CEO at Company.</p>
-                        <p>No one is better than John Doe.</p>
+                        <img src="Images/bong.jpg" width="150px;" height="150px">
+                        <p><span>봉준호</span>넷플릭스로 새로운 도전</p>
+                        <p>봉준호가 넷플릭스 미드로 새로운 작품을 가지고 온다.</p>
                     </div>
                     <div class="testi">
-                        <img src="shazam.jpg" alt="샤잠!" width="150px;" height="150px">
-                        <p><span>Rebecca Flex.</span> CEO at Company.</p>
-                        <p>No one is better than John Doe.</p>
+                        <img src="Images/yoonsuck.jpg" alt="김윤석" width="150px;" height="150px">
+                        <p><span>김윤석</span> 영화 감독으로의 도전</p>
+                        <p>김윤석이 미성년으로 영화 감독으로 돌아온다.</p>
+                    </div>
                     </div>
                 </div>
+                <hr>
+                <p>오늘의 트레일러</p>
+                <hr>
+            
                 <div style="position: relative; max-width: 100%; padding-bottom: 56.25%; height: 0;">
                     <iframe width="320" height="180" src="https://www.youtube.com/embed/t433PEQGErc" frameborder="0" allowfullscreen="" style="position: absolute; position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>    
                 </div>
-                <hr>
                 <hr>
                 <div class="container" style="border:1px solid red; width:100%;">
                     <div class="row" >
                         <div class="portfolio-menu">
                         <ul class = "filter-menu"style="display:flex; flex-direction: row; justify-content: space-around; width:100%; align-content:center; margin:0;">
-                            <li data-filter="*" class="active navli" onclick="filterSelection('all')">ShowAll</li>
-                            <li data-filter=".soon" class="navli" onclick="filterSelection('coming')">Comming Soon</li>
-                            <li data-filter=".top" class="navli" onclick="filterSelection('current')">Top Rated</li>
-                            <li data-filter=".released" class="navli" onclick="filterSelection('toprate')">Recently Released</li>
+                            <li class="navli select" onclick="filterSelection('all')">ShowAll</li>
+                            <li class="navli" onclick="filterSelection('coming')">Comming Soon</li>
+                            <li class="navli" onclick="filterSelection('current')">Top Rated</li>
+                            <li class="navli" onclick="filterSelection('toprate')">Recently Released</li>
                         </ul>
                         </div>
                     </div>
@@ -165,7 +220,7 @@
                                             </a>
                                         </div>
                                         <div class="portfolio-content">
-                                            <h2>Brand</h2>
+                                            <h2>brand</h2>
                                             <div class="review"></div>
                                         </div>
                                     </div>
@@ -281,13 +336,10 @@
                     Copyright © 2019 BrandCrowd   |   All Rights Reserved.   |   All individual works are copyright protected by their respective owners & contributors.
             </p>
         </div>
-
-        <script src="index.js"></script>
         <script src="jquery.magnific-popup.min.js"></script>
-        <script>
+        <script src="index.js"></script>
       
-        // filter jquery
-    </script>
+        
     </body>
   
  
