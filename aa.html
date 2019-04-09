@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title>Moviewer</title>
+        <style>
+         * {
+            box-sizing: border-box;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            font-family: 'Vollkorn', Arial, serif;
+            font-size: 1em; 
+        }
+        
+        
+        body {
+          background: white; 
+          }
+        
+        
+        header {
+          background: white;
+          box-shadow: 0px -3px 15px 2px;
+          }
+        
+        .header-container {
+          width: 960px;
+          margin: auto; 
+          display: flex;
+          flex-direction: row; 
+          align-items: center;
+          background: black;
+        }
+          
+        .main-menu {
+          width: 100%;
+          z-index: 1;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          overflow: visible;
+          max-width: 960px;  
+          z-index: 1;
+          flex-direction: row; 
+          align-items: flex-start; 
+          height: 48px;         
+        }
+        .main-menu a {
+            width: 100%;
+            color: white;
+            text-align: center;
+            align-content: center;
+            padding: .75em 1em;
+            display: block;
+            border-bottom: 2px solid #ddd; 
+        }
+        
+        .main-menu a:hover {
+              color: #c14400;
+              border-bottom-color: #c14400; 
+        }
+        
+        .drop-menu {
+          display: flex;
+          flex-direction: column; 
+          align-items: center;
+          width: 100%; 
+          transition: max-height .4s, opacity .3s;
+          max-height: 0;
+          opacity: 0;
+          overflow: hidden; 
+        }
+        
+        
+        .drop-menu > .menu-button {
+          height: 100%;
+          transition: transform .4s;
+          transform: translateY(-300%);
+          background: #aaa; 
+        }
+        
+        
+        .dropdown-wrapper:hover > .menu-button {
+          color: #c14400;
+          background: #333; 
+        }
+        
+        .dropdown-wrapper:hover .drop-menu{
+          max-height: 300px;  
+          opacity: 1;
+        }
+        
+        .dropdown-wrapper:hover > .drop-menu .menu-button {
+          transform: translateY(0%); 
+        }
+        
+        .sildImg{
+            display: flex;
+            height: 500px;
+        }
+        
+        footer{
+                height: 55px;
+                background-color:#ddd; 
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 960px;
+                margin: auto;
+            }
+        
+        #hgroup{
+              width: 960px;
+              position: relative;
+              padding: 45px 0 40px;
+              margin: auto;
+              height: 156px;
+          }
+        #hgroup h1, #header #hgroup h2{font-weight:normal; font-style:normal; text-transform:none;}
+        #hgroup h1{font-size:46px;}
+        #hgroup h1 span{font-size:36px; text-transform:uppercase;}
+        #hgroup h1 a{color:#000000;   background: white; }
+        #hgroup h2{font-size:12px;}
+        
+        @media (max-width: 600px) {
+          
+          .header-container {
+            width: 100%;
+            margin: 0 0 0 0;
+          }
+        
+          .header-container {
+            height: 200px;
+            align-items: flex-start;
+          } 
+          
+          .main-menu {   
+            z-index: 1;
+            flex-direction: column; 
+            align-items: flex-start; 
+            height: 48px; 
+            margin: 0;
+            justify-content: space-between;
+          }
+            
+          .main-menu > .menu-button {
+            width: 100%;
+          }
+          .sildImg{
+              height: 250px;
+              position: relative;;
+          }
+          .sildImg .mySlides{
+              width: 100%;
+          }
+          footer{
+              width: 100%;
+              align-items: center;
+          }
+        }
+        
+        </style>
+    </head>
+
+    <body>
+    <header>
+            <div id="hgroup">
+                <h1><a href="index.html">C<span>oncept</span> C<span>lean</span></a></h1>
+                <h2>Free Website Template</h2>
+            </div>
+            <div class="header-container">
+                <nav class="main-menu">
+                    <div class="dropdown-wrapper menu-button">		
+                        <a class="menu-button" href="#">현재 상영작</a>
+                            
+                    </div>
+                    
+                    <div class="dropdown-wrapper menu-button">		
+                        <a class="menu-button" href="#">사이트 소개</a>
+                    </div>
+            
+                    <div class="dropdown-wrapper menu-button">		
+                        <a class="menu-button" href="#" >영화리뷰</a>
+                            
+                        <div class="drop-menu">
+                            
+                            <a class="menu-button" href="#">한국 영화</a>
+                            <a class="menu-button" href="#">서양 영화</a>
+                            <a class="menu-button" href="#">애니메이션</a>
+                            
+                            
+                        </div>
+                    </div>
+            
+                    <div class="dropdown-wrapper menu-button">
+                            
+                        <a class="menu-button" href="#" >Contact</a>
+                            
+                        <div class="drop-menu">
+                            <a class="menu-button" href="#">고객건의</a>
+                            <a class="menu-button" href="#">sample</a>
+                            <a class="menu-button" href="#">sample</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- nav end -->
+
+
+        
+        
+        <div class="sildImg" style="position:relative">
+            <img class="mySlides" src="http://image.cine21.com/cine21/still/2019/0401/15_21_17__5ca1adddd85f9.jpg" width="1980px;">
+            <img class="mySlides" src="http://image.cine21.com/cine21/still/2019/0401/15_21_17__5ca1adddd85f9.jpg" width="1980px;">
+            <img class="mySlides" src="http://image.cine21.com/cine21/still/2019/0401/15_21_17__5ca1adddd85f9.jpg" width="1980px;" >
+            
+            <a class="slidBtn_left" style="position:absolute;top:45%;left:20px;color: white;" onclick="plusDivs(-1)">❮</a>
+            <a class="slidBtn_right" style="position:absolute;top:45%;right:20px;color:white;" onclick="plusDivs(1)">❯</a>
+        </div>
+        
+
+
+        <div id="content" class="muti photodata">
+          <article id="article" style="border:1px solid red; height: 1000px; width: 960px; margin: auto">
+              <ul class="coverdata">
+                <li>
+                  <a href="http://image.cine21.com/resize/cine21/movie/2019/0405/10_49_37__5ca6b43180600[H800-].jpg" rel="cover_photo" title="1200호" class="cover_image">
+                    <img src="http://image.cine21.com/resize/cine21/movie/2019/0405/10_49_37__5ca6b43180600[X300,360].jpg" alt="" class="thumb">
+                  </a>
+                  <div class="tit_box">
+                    <p class="ho_num">No.1200</p>
+                    <p class="date">2019-04-09~2019-04-16</p>
+                    
+                          <p class="coverpeople">
+                      커버인물
+                      <span class="bar">|</span>
+                      <strong>
+                              <a href="/db/person/info/?person_id=57423">김윤석</a>&nbsp;
+                              <a href="/db/person/info/?person_id=10414">염정아</a>&nbsp;
+                              <a href="/db/person/info/?person_id=82573">김소진</a>&nbsp;
+                              <a href="/db/person/info/?person_id=104624">김혜준</a>&nbsp;
+                              <a href="/db/person/info/?person_id=108169">박세진</a>&nbsp;
+                              </strong>
+                    </p>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="http://image.cine21.com/resize/cine21/movie/2019/0405/10_49_37__5ca6b43180600[H800-].jpg" rel="cover_photo" title="1200호" class="cover_image">
+                      <img src="http://image.cine21.com/resize/cine21/movie/2019/0405/10_49_37__5ca6b43180600[X300,360].jpg" alt="" class="thumb">
+                    </a>
+                    <div class="tit_box">
+                      <p class="ho_num">No.1200</p>
+                      <p class="date">2019-04-09~2019-04-16</p>
+                      
+                            <p class="coverpeople">
+                        커버인물
+                        <span class="bar">|</span>
+                        <strong>
+                                <a href="/db/person/info/?person_id=57423">김윤석</a>&nbsp;
+                                <a href="/db/person/info/?person_id=10414">염정아</a>&nbsp;
+                                <a href="/db/person/info/?person_id=82573">김소진</a>&nbsp;
+                                <a href="/db/person/info/?person_id=104624">김혜준</a>&nbsp;
+                                <a href="/db/person/info/?person_id=108169">박세진</a>&nbsp;
+                                </strong>
+                      </p>
+                      </div>
+                  </li>
+
+                  <li >  
+                    <a href="http://image.cine21.com/resize/cine21/movie/2019/0405/10_49_37__5ca6b43180600[H800-].jpg" rel="cover_photo" title="1200호" class="cover_image" >
+                      <img src="http://image.cine21.com/resize/cine21/movie/2019/0405/10_49_37__5ca6b43180600[X300,360].jpg" alt="" class="thumb" >
+                    </a>
+                    <div class="tit_box"  >
+                      <p class="ho_num">No.1200</p>
+                      <p class="date">2019-04-09~2019-04-16</p>
+                      
+                            <p class="coverpeople">
+                        커버인물
+                        <span class="bar">|</span>
+                        <strong>
+                                <a href="/db/person/info/?person_id=57423">김윤석</a>&nbsp;
+                                <a href="/db/person/info/?person_id=10414">염정아</a>&nbsp;
+                                <a href="/db/person/info/?person_id=82573">김소진</a>&nbsp;
+                                <a href="/db/person/info/?person_id=104624">김혜준</a>&nbsp;
+                                <a href="/db/person/info/?person_id=108169">박세진</a>&nbsp;
+                                </strong>
+                      </p>
+                      </div>
+                  </li>
+
+                  <li >  
+                    <a href="http://image.cine21.com/resize/cine21/movie/2019/0405/10_49_37__5ca6b43180600[H800-].jpg" rel="cover_photo" title="1200호" class="cover_image" >
+                      <img src="http://image.cine21.com/resize/cine21/movie/2019/0405/10_49_37__5ca6b43180600[X300,360].jpg" alt="" class="thumb" >
+                    </a>
+                    <div class="tit_box"  >
+                      <p class="ho_num">No.1200</p>
+                      <p class="date">2019-04-09~2019-04-16</p>
+                      
+                            <p class="coverpeople">
+                        커버인물
+                        <span class="bar">|</span>
+                        <strong>
+                                <a href="/db/person/info/?person_id=57423">김윤석</a>&nbsp;
+                                <a href="/db/person/info/?person_id=10414">염정아</a>&nbsp;
+                                <a href="/db/person/info/?person_id=82573">김소진</a>&nbsp;
+                                <a href="/db/person/info/?person_id=104624">김혜준</a>&nbsp;
+                                <a href="/db/person/info/?person_id=108169">박세진</a>&nbsp;
+                                </strong>
+                      </p>
+                      </div>
+                  </li>
+
+                  <li >  
+                    <a href="http://image.cine21.com/resize/cine21/movie/2019/0405/10_49_37__5ca6b43180600[H800-].jpg" rel="cover_photo" title="1200호" class="cover_image" >
+                      <img src="http://image.cine21.com/resize/cine21/movie/2019/0405/10_49_37__5ca6b43180600[X300,360].jpg" alt="" class="thumb" >
+                    </a>
+                    <div class="tit_box"  >
+                      <p class="ho_num">No.1200</p>
+                      <p class="date">2019-04-09~2019-04-16</p>
+                      
+                            <p class="coverpeople">
+                        커버인물
+                        <span class="bar">|</span>
+                        <strong>
+                                <a href="/db/person/info/?person_id=57423">김윤석</a>&nbsp;
+                                <a href="/db/person/info/?person_id=10414">염정아</a>&nbsp;
+                                <a href="/db/person/info/?person_id=82573">김소진</a>&nbsp;
+                                <a href="/db/person/info/?person_id=104624">김혜준</a>&nbsp;
+                                <a href="/db/person/info/?person_id=108169">박세진</a>&nbsp;
+                                </strong>
+                      </p>
+                      </div>
+                  </li>
+
+                  <li >  
+                    <a href="http://image.cine21.com/resize/cine21/movie/2019/0405/10_49_37__5ca6b43180600[H800-].jpg" rel="cover_photo" title="1200호" class="cover_image" >
+                      <img src="http://image.cine21.com/resize/cine21/movie/2019/0405/10_49_37__5ca6b43180600[X300,360].jpg" alt="" class="thumb" >
+                    </a>
+                    <div class="tit_box"  >
+                      <p class="ho_num">No.1200</p>
+                      <p class="date">2019-04-09~2019-04-16</p>
+                      
+                            <p class="coverpeople">
+                        커버인물
+                        <span class="bar">|</span>
+                        <strong>
+                                <a href="/db/person/info/?person_id=57423">김윤석</a>&nbsp;
+                                <a href="/db/person/info/?person_id=10414">염정아</a>&nbsp;
+                                <a href="/db/person/info/?person_id=82573">김소진</a>&nbsp;
+                                <a href="/db/person/info/?person_id=104624">김혜준</a>&nbsp;
+                                <a href="/db/person/info/?person_id=108169">박세진</a>&nbsp;
+                                </strong>
+                      </p>
+                      </div>
+                  </li>
+                  
+              </ul>
+
+              
+      
+          </article>
+
+         
+
+
+
+
+          
+          <style>
+            #content{
+              padding: 40px 0 50px;
+              min-height: 670px;
+              width: 960px;
+              margin: auto;
+            }
+            #content.multi.photodata .coverdata {
+                overflow: hidden;
+                margin-left: -30px;
+                }
+                ul, menu, dir {
+                  display: block;
+                  list-style-type: disc;
+                  margin-block-start: 1em;
+                  margin-block-end: 1em;
+                  margin-inline-start: 0px;
+                  margin-inline-end: 0px;
+                  /*padding-inline-start: 40px;*/
+              }
+              li{
+                display: list-item;
+                position: relative;
+                float: left;
+                margin: 0 0 15px 15px; /*30px 30px*/
+                width: 300px;
+              }
+              a:link{
+                text-decoration: none;
+                color: black;
+              }
+              #content.multi.photodata .coverdata li .thumb {
+              display: block;
+              width: 300px;
+              height: 360px;
+                }
+                img {
+                border: 0px;
+                vertical-align: top;
+              }
+           .tit_box {
+    border: 1px solid #e3e3e3;
+    padding: 7px 12px 0 13px;
+    height: 103px;
+}
+ .ho_num {
+    font-weight: bold;
+    color: #000;
+    font-size: 25px;
+    border-bottom: 1px solid #efefef;
+    padding-bottom: 7px;
+    margin-bottom: 10px;
+    
+}
+#content.multi.photodata .coverdata li .tit_box .date {
+    font-size: 12px;
+    font-weight: normal;
+    color: #888;
+    margin-bottom: 3px;
+}
+ .coverpeople {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 7px;
+    font-size: 12px;
+}
+div{
+  font-size: 14px;
+    color: #545454;
+}
+          </style>
+        </div>
+
+
+          <footer class="footer">
+            <h2>Footer</h2>
+          </footer>
+
+             
+        <script>
+                var slideIndex = 1;
+                showDivs(slideIndex);
+                
+                function plusDivs(n) {
+                showDivs(slideIndex += n);
+                }
+                
+                function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                if (n > x.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = x.length} ;
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                }
+                x[slideIndex-1].style.display = "block";  
+                }
+  
+              var myIndex = 0;
+              carousel();
+  
+              function carousel() {
+                  var i;
+                  var x = document.getElementsByClassName("mySlides");
+                  for (i = 0; i < x.length; i++) {
+                  x[i].style.display = "none";  
+                  }
+                  myIndex++;
+                  if (myIndex > x.length) {myIndex = 1}    
+                  x[myIndex-1].style.display = "block";  
+                  setTimeout(carousel, 5000);
+              }
+      </script>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="js/google-map.js"></script>
+<script src="js/main.js"></script>
+    </body>
+</html>

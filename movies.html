@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title>Moviewer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+<!-- 
+         <style>
+      
+            @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+        
+             
+
+            .jg{font-family: 'Jeju Gothic', sans-serif;}
+     
+            </style> -->
+
+        <style>
+         * {
+            box-sizing: border-box;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            font-family: 'Vollkorn', Arial, serif;
+            font-size: 1em; 
+        }
+        
+        
+        body {
+          background: white; 
+          }
+        
+        
+        header {
+          background: white;
+          box-shadow: 0px -3px 15px 2px;
+          }
+        
+        .header-container {
+          width: 960px;
+          margin: auto; 
+          display: flex;
+          flex-direction: row; 
+          align-items: center;
+          background: black;
+        }
+          
+        .main-menu {
+          width: 100%;
+          z-index: 1;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          overflow: visible;
+          max-width: 960px;  
+          z-index: 1;
+          flex-direction: row; 
+          align-items: flex-start; 
+          height: 48px;         
+        }
+        .main-menu a {
+            width: 100%;
+            color: white;
+            text-align: center;
+            align-content: center;
+            padding: .75em 1em;
+            display: block;
+            border-bottom: 2px solid #ddd; 
+        }
+        
+        .main-menu a:hover {
+              color: #c14400;
+              border-bottom-color: #c14400; 
+        }
+        
+        .drop-menu {
+          display: flex;
+          flex-direction: column; 
+          align-items: center;
+          width: 100%; 
+          transition: max-height .4s, opacity .3s;
+          max-height: 0;
+          opacity: 0;
+          overflow: hidden; 
+        }
+        
+        
+        .drop-menu > .menu-button {
+          height: 100%;
+          transition: transform .4s;
+          transform: translateY(-300%);
+          background: #aaa; 
+        }
+        
+        
+        .dropdown-wrapper:hover > .menu-button {
+          color: #c14400;
+          background: #333; 
+        }
+        
+        .dropdown-wrapper:hover .drop-menu{
+          max-height: 300px;  
+          opacity: 1;
+        }
+        
+        .dropdown-wrapper:hover > .drop-menu .menu-button {
+          transform: translateY(0%); 
+        }
+        
+        .sildImg{
+            display: flex;
+            height: 500px;
+        }
+        
+        footer{
+                height: 55px;
+                background-color:#ddd; 
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 960px;
+                margin: auto;
+            }
+        
+        #hgroup{
+              width: 960px;
+              position: relative;
+              padding: 45px 0 40px;
+              margin: auto;
+              height: 156px;
+          }
+        #hgroup h1, #header #hgroup h2{font-weight:normal; font-style:normal; text-transform:none;}
+        #hgroup h1{font-size:46px;}
+        #hgroup h1 span{font-size:36px; text-transform:uppercase;}
+        #hgroup h1 a{color:#000000;   background: white; }
+        #hgroup h2{font-size:12px;}
+        
+        @media (max-width: 600px) {
+          
+          .header-container {
+            width: 100%;
+            margin: 0 0 0 0;
+          }
+        
+          .header-container {
+            height: 200px;
+            align-items: flex-start;
+          } 
+          
+          .main-menu {   
+            z-index: 1;
+            flex-direction: column; 
+            align-items: flex-start; 
+            height: 48px; 
+            margin: 0;
+            justify-content: space-between;
+          }
+            
+          .main-menu > .menu-button {
+            width: 100%;
+          }
+          .sildImg{
+              height: 250px;
+              position: relative;;
+          }
+          .sildImg .mySlides{
+              width: 100%;
+          }
+          footer{
+              width: 100%;
+              align-items: center;
+          }
+
+          /* 600px보다 화면사이즈가 작으면 */
+          /* @media screen and (max-width:600px){
+                    .col-lg-9, .col-lg-3{flex-direction: column;}
+                    /* .navbar a{text-align: center;} */
+                } */
+        }
+        
+        </style>
+    </head>
+
+    <body>
+    <header>
+            <div id="hgroup">
+                <h1><a href="index.html">C<span>oncept</span> C<span>lean</span></a></h1>
+                <h2>Free Website Template</h2>
+            </div>
+            <div class="header-container">
+                <nav class="main-menu">
+                    <div class="dropdown-wrapper menu-button">		
+                        <a class="menu-button" href="#">현재 상영작</a>
+                            
+                    </div>
+                    
+                    <div class="dropdown-wrapper menu-button">		
+                        <a class="menu-button" href="#">사이트 소개</a>
+                    </div>
+            
+                    <div class="dropdown-wrapper menu-button">		
+                        <a class="menu-button" href="#" >영화리뷰</a>
+                            
+                        <div class="drop-menu">
+                            
+                            <a class="menu-button" href="#">한국 영화</a>
+                            <a class="menu-button" href="#">서양 영화</a>
+                            <a class="menu-button" href="#">애니메이션</a>
+                            
+                            
+                        </div>
+                    </div>
+            
+                    <div class="dropdown-wrapper menu-button">
+                            
+                        <a class="menu-button" href="#" >Contact</a>
+                            
+                        <div class="drop-menu">
+                            <a class="menu-button" href="#">고객건의</a>
+                            <a class="menu-button" href="#">sample</a>
+                            <a class="menu-button" href="#">sample</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- nav end -->
+
+
+        
+        
+        <div class="sildImg mt-2" style="position:relative">
+            <img class="mySlides" src="./movie6.jpg" width="1980px;">
+            <img class="mySlides" src="./movie5.jpg" width="1980px;">
+            <img class="mySlides" src="./movie4.jpg" width="1980px;" >
+            
+            
+            <a class="slidBtn_left" style="position:absolute;top:45%;left:20px;color: white;" onclick="plusDivs(-1)">❮</a>
+            <a class="slidBtn_right" style="position:absolute;top:45%;right:20px;color:white;" onclick="plusDivs(1)">❯</a>
+        </div>
+        
+        
+
+
+        <!-- <div id="content" class="muti photodata">
+          <article id="article" style="border:1px solid red; height: 1000px; width: 960px; margin: auto">
+              <ul class="coverdata">
+                <li>
+                  <a href="http://image.cine21.com/resize/cine21/movie/2019/0405/10_49_37__5ca6b43180600[H800-].jpg" rel="cover_photo" title="1200호" class="cover_image">
+                    <img src="http://image.cine21.com/resize/cine21/movie/2019/0405/10_49_37__5ca6b43180600[X300,360].jpg" alt="" class="thumb">
+                  </a>
+                  <div class="tit_box">
+                    <p class="ho_num">No.1200</p>
+                    <p class="date">2019-04-09~2019-04-16</p>
+                    
+                          <p class="coverpeople">
+                      커버인물
+                      <span class="bar">|</span>
+                      <strong>
+                              <a href="/db/person/info/?person_id=57423">김윤석</a>&nbsp;
+                              <a href="/db/person/info/?person_id=10414">염정아</a>&nbsp;
+                              <a href="/db/person/info/?person_id=82573">김소진</a>&nbsp;
+                              <a href="/db/person/info/?person_id=104624">김혜준</a>&nbsp;
+                              <a href="/db/person/info/?person_id=108169">박세진</a>&nbsp;
+                              </strong>
+                    </p>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="http://image.cine21.com/resize/cine21/movie/2019/0405/10_49_37__5ca6b43180600[H800-].jpg" rel="cover_photo" title="1200호" class="cover_image">
+                      <img src="http://image.cine21.com/resize/cine21/movie/2019/0405/10_49_37__5ca6b43180600[X300,360].jpg" alt="" class="thumb">
+                    </a>
+                    <div class="tit_box">
+                      <p class="ho_num">No.1200</p>
+                      <p class="date">2019-04-09~2019-04-16</p>
+                      
+                            <p class="coverpeople">
+                        커버인물
+                        <span class="bar">|</span>
+                        <strong>
+                                <a href="/db/person/info/?person_id=57423">김윤석</a>&nbsp;
+                                <a href="/db/person/info/?person_id=10414">염정아</a>&nbsp;
+                                <a href="/db/person/info/?person_id=82573">김소진</a>&nbsp;
+                                <a href="/db/person/info/?person_id=104624">김혜준</a>&nbsp;
+                                <a href="/db/person/info/?person_id=108169">박세진</a>&nbsp;
+                                </strong>
+                      </p>
+                      </div>
+                  </li>
+
+                  <li >  
+                    <a href="http://image.cine21.com/resize/cine21/movie/2019/0405/10_49_37__5ca6b43180600[H800-].jpg" rel="cover_photo" title="1200호" class="cover_image" >
+                      <img src="http://image.cine21.com/resize/cine21/movie/2019/0405/10_49_37__5ca6b43180600[X300,360].jpg" alt="" class="thumb" >
+                    </a>
+                    <div class="tit_box"  >
+                      <p class="ho_num">No.1200</p>
+                      <p class="date">2019-04-09~2019-04-16</p>
+                      
+                            <p class="coverpeople">
+                        커버인물
+                        <span class="bar">|</span>
+                        <strong>
+                                <a href="/db/person/info/?person_id=57423">김윤석</a>&nbsp;
+                                <a href="/db/person/info/?person_id=10414">염정아</a>&nbsp;
+                                <a href="/db/person/info/?person_id=82573">김소진</a>&nbsp;
+                                <a href="/db/person/info/?person_id=104624">김혜준</a>&nbsp;
+                                <a href="/db/person/info/?person_id=108169">박세진</a>&nbsp;
+                                </strong>
+                      </p>
+                      </div>
+                  </li>
+
+                  <li >  
+                    <a href="http://image.cine21.com/resize/cine21/movie/2019/0405/10_49_37__5ca6b43180600[H800-].jpg" rel="cover_photo" title="1200호" class="cover_image" >
+                      <img src="http://image.cine21.com/resize/cine21/movie/2019/0405/10_49_37__5ca6b43180600[X300,360].jpg" alt="" class="thumb" >
+                    </a>
+                    <div class="tit_box"  >
+                      <p class="ho_num">No.1200</p>
+                      <p class="date">2019-04-09~2019-04-16</p>
+                      
+                            <p class="coverpeople">
+                        커버인물
+                        <span class="bar">|</span>
+                        <strong>
+                                <a href="/db/person/info/?person_id=57423">김윤석</a>&nbsp;
+                                <a href="/db/person/info/?person_id=10414">염정아</a>&nbsp;
+                                <a href="/db/person/info/?person_id=82573">김소진</a>&nbsp;
+                                <a href="/db/person/info/?person_id=104624">김혜준</a>&nbsp;
+                                <a href="/db/person/info/?person_id=108169">박세진</a>&nbsp;
+                                </strong>
+                      </p>
+                      </div>
+                  </li>
+
+                  <li >  
+                    <a href="http://image.cine21.com/resize/cine21/movie/2019/0405/10_49_37__5ca6b43180600[H800-].jpg" rel="cover_photo" title="1200호" class="cover_image" >
+                      <img src="http://image.cine21.com/resize/cine21/movie/2019/0405/10_49_37__5ca6b43180600[X300,360].jpg" alt="" class="thumb" >
+                    </a>
+                    <div class="tit_box"  >
+                      <p class="ho_num">No.1200</p>
+                      <p class="date">2019-04-09~2019-04-16</p>
+                      
+                            <p class="coverpeople">
+                        커버인물
+                        <span class="bar">|</span>
+                        <strong>
+                                <a href="/db/person/info/?person_id=57423">김윤석</a>&nbsp;
+                                <a href="/db/person/info/?person_id=10414">염정아</a>&nbsp;
+                                <a href="/db/person/info/?person_id=82573">김소진</a>&nbsp;
+                                <a href="/db/person/info/?person_id=104624">김혜준</a>&nbsp;
+                                <a href="/db/person/info/?person_id=108169">박세진</a>&nbsp;
+                                </strong>
+                      </p>
+                      </div>
+                  </li>
+
+                  <li >  
+                    <a href="http://image.cine21.com/resize/cine21/movie/2019/0405/10_49_37__5ca6b43180600[H800-].jpg" rel="cover_photo" title="1200호" class="cover_image" >
+                      <img src="http://image.cine21.com/resize/cine21/movie/2019/0405/10_49_37__5ca6b43180600[X300,360].jpg" alt="" class="thumb" >
+                    </a>
+                    <div class="tit_box"  >
+                      <p class="ho_num">No.1200</p>
+                      <p class="date">2019-04-09~2019-04-16</p>
+                      
+                            <p class="coverpeople">
+                        커버인물
+                        <span class="bar">|</span>
+                        <strong>
+                                <a href="/db/person/info/?person_id=57423">김윤석</a>&nbsp;
+                                <a href="/db/person/info/?person_id=10414">염정아</a>&nbsp;
+                                <a href="/db/person/info/?person_id=82573">김소진</a>&nbsp;
+                                <a href="/db/person/info/?person_id=104624">김혜준</a>&nbsp;
+                                <a href="/db/person/info/?person_id=108169">박세진</a>&nbsp;
+                                </strong>
+                      </p>
+                      </div>
+                  </li>
+                  
+              </ul>
+
+      
+          </article> -->
+
+          
+          <section class="ftco-section">
+                <div class="container" >
+                    
+                <div class="row">
+                  
+                    <div class="col-lg-9" >
+                        <div class="row" style=" display: flex;
+                        align-items: center;
+                        justify-content: center;">
+                           
+                            <div class="col-md-4 ftco-animate">
+                                
+                                
+                                    <div class="blog-entry">
+                                        
+                                        
+                                        
+                                        
+                                        <button class="btn btn-black py-2 mb-1">1</button>
+                                  
+                                        <a href="single.html"  class="img-2"><img src="http://image.cine21.com/resize/cine21/poster/2019/0306/11_00_26__5c7f29ba915b8[X224,320].jpg" class="img-fluid" alt="Colorlib Template"></a>
+                                        
+                                        <div class="text pt-3">
+                                                <h4 style="font-family: arial;">돈</h4>
+                                                <h6 style="font-family: arial;">누적관객수 | 3,117,590</h6>
+
+                                            <p class="mb-0"><a href="single.html" class="btn btn-black py-2"  style="font-family: arial;">상세정보 <span class="icon-arrow_forward ml-4"></span></a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 ftco-animate">
+                                    <div class="blog-entry">
+                                            <button class="btn btn-black py-2 mb-1">2</button>
+                                        <a href="single.html" class="img-2"><img src="http://image.cine21.com/resize/cine21/poster/2019/0329/18_08_19__5c9de0836c615[X224,320].jpg" class="img-fluid" alt="Colorlib Template"></a>
+                                        <div class="text pt-3">
+                                                <h4 style="font-family: arial;">어스</h4>
+                                                <h6 style="font-family: arial;">누적관객수 | 1,344,713</h6>
+                                            <p class="mb-0"><a href="single.html" class="btn btn-black py-2"  style="font-family: arial;">상세정보 <span class="icon-arrow_forward ml-4"></span></a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 ftco-animate">
+                                    <div class="blog-entry">
+                                            <button class="btn btn-black py-2 mb-1">3</button>
+                                        <a href="single.html" class="img-2"><img src="http://image.cine21.com/resize/cine21/poster/2019/0329/18_11_10__5c9de12e1db7b[X224,320].jpg" class="img-fluid" alt="Colorlib Template"></a>
+                                        <div class="text pt-3">
+                                                <h4 style="font-family: arial;">생일</h4>
+                                                <h6 style="font-family: arial;">누적관객수 | 375,486</h6>
+                                            <p class="mb-0"><a href="single.html" class="btn btn-black py-2"  style="font-family: arial;">상세정보 <span class="icon-arrow_forward ml-4"></span></a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 ftco-animate">
+                                    <div class="blog-entry">
+                                            <button class="btn btn-black py-2 mb-1">4</button>
+                                        <a href="single.html" class="img-2"><img src="http://image.cine21.com/resize/cine21/poster/2019/0305/11_38_56__5c7de1405e014[X224,320].jpg" class="img-fluid" alt="Colorlib Template"></a>
+                                        <div class="text pt-3">
+                                                <h4 style="font-family: arial;">장난스런 키스</h4>
+                                                <h6 style="font-family: arial;">누적관객수 | 318,798</h6>
+                                            <p class="mb-0"><a href="single.html" class="btn btn-black py-2"  style="font-family: arial;">상세정보 <span class="icon-arrow_forward ml-4"></span></a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 ftco-animate">
+                                    <div class="blog-entry">
+                                            <button class="btn btn-black py-2 mb-1">5</button>
+                                        <a href="single.html" class="img-2"><img src="http://image.cine21.com/resize/cine21/poster/2019/0225/14_10_18__5c7378ba87fb6[X224,320].jpg" class="img-fluid" alt="Colorlib Template"></a>
+                                        <div class="text pt-3">
+                                                <h4 style="font-family: arial;">캡틴 마블</h4>
+                                                <h6 style="font-family: arial;">누적관객수 | 5,648,648</h6>
+                                            <p class="mb-0"><a href="single.html" class="btn btn-black py-2"  style="font-family: arial;">상세정보 <span class="icon-arrow_forward ml-4"></span></a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 ftco-animate">
+                                    <div class="blog-entry">
+                                            <button class="btn btn-black py-2 mb-1">6</button>
+                                        <a href="single.html" class="img-2"><img src="http://image.cine21.com/resize/cine21/poster/2019/0328/18_11_36__5c9c8fc8f3e93[X224,320].jpg" class="img-fluid" alt="Colorlib Template"></a>
+                                        <div class="text pt-3">
+                                                <h4 style="font-family: arial;">덤보</h4>
+                                                <h6 style="font-family: arial;">누적관객수 | 296,254</h6>
+                                            <p class="mb-0"><a href="single.html" class="btn btn-black py-2"  style="font-family: arial;">상세정보 <span class="icon-arrow_forward ml-4"></span></a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 ftco-animate">
+                                    <div class="blog-entry">
+                                            <button class="btn btn-black py-2 mb-1">7</button>
+                                        <a href="single.html" class="img-2"><img src="http://image.cine21.com/resize/cine21/poster/2019/0306/18_06_57__5c7f8db14c36e[X224,320].jpg" class="img-fluid" alt="Colorlib Template"></a>
+                                        <div class="text pt-3">
+                                                <h4 style="font-family: arial;">로망</h4>
+                                                <h6 style="font-family: arial;">누적관객수 | 46,939</h6>
+                                            <p class="mb-0" ><a href="single.html" class="btn btn-black py-2"  style="font-family: arial;">상세정보 <span class="icon-arrow_forward ml-4"></span></a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 ftco-animate">
+                                    <div class="blog-entry">
+                                            <button class="btn btn-black py-2 mb-1">8</button>
+                                        <a href="single.html" class="img-2"><img src="http://image.cine21.com/resize/cine21/poster/2019/0327/14_41_21__5c9b0d0118a26[X224,320].jpg" class="img-fluid" alt="Colorlib Template"></a>
+                                        <div class="text pt-3">
+                                                <h4 style="font-family: arial;">콜레트</h4>
+                                                <h6 style="font-family: arial;">누적관객수 | 35,085</h6>
+                                            <p class="mb-0"><a href="single.html" class="btn btn-black py-2"  style="font-family: arial;">상세정보 <span class="icon-arrow_forward ml-4"></span></a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 ftco-animate">
+                                    <div class="blog-entry">
+                                            <button class="btn btn-black py-2 mb-1">9</button>
+                                        <a href="single.html" class="img-2"><img src="http://image.cine21.com/resize/cine21/poster/2019/0322/10_09_39__5c9435d3d62ff[X224,320].jpg" class="img-fluid" alt="Colorlib Template"></a>
+                                        <div class="text pt-3">
+                                                <h4 style="font-family: arial;">바이스</h4>
+                                                <h6 style="font-family: arial;">누적관객수 | 9,652</h6>
+                                            <p class="mb-0"><a href="single.html" class="btn btn-black py-2" style="font-family: arial;">상세정보 <span class="icon-arrow_forward ml-4"></span></a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                        </div>
+                   
+                    </div>
+        
+                    <div class="col-lg-3">
+                        <div class="sidebar-wrap">
+                            <div class="sidebar-box p-4 about text-center ftco-animate">
+                              <h2 class="heading mb-4" style="font-family: arial;">이달의 배우</h2>
+                              <img src="./actor.jpg" class="img-fluid" alt="Colorlib Template">
+                              <div class="text pt-4" style="text-align: left;">
+                       
+                                  
+                                  <table>
+                                      <tr>
+                                          <td style="padding-right: 30px; font-family: arial;">이름</td>
+                                          <td  style="font-family: arial;">유지태</td>
+                                          
+                                      </tr>
+                          
+                                      <tr>
+                                          <td style="padding-right: 30px; font-family: arial;">성별</td>
+                                          <td style="font-family: arial;">남</td>
+                                       
+                                      </tr>
+                          
+                                      <tr>
+                                              <td style="padding-right: 30px; font-family: arial;">생년월일</td>
+                                              <td style="font-family: arial;">1976-04-13</td>
+                                           
+                                       </tr>
+                                       <tr>
+                                          <td style="padding-right: 30px; font-family: arial;">신장/체중</td>
+                                          <td style="font-family: arial;">186cm, 74kg</td>
+                                       
+                                   </tr>
+                                   <tr>
+                                      <td style="padding-right: 30px; font-family: arial;">소속사</td>
+                                      <td style="font-family: arial;">지티비엔터테인먼트</td>
+                                   
+                               </tr>
+                                  </table>
+                          
+                              </div>
+                            </div>
+
+
+                            <!-- <div class="sidebar-box p-4 ftco-animate">
+                          <form action="#" class="search-form">
+                            <div class="form-group">
+                              <span class="icon icon-search"></span>
+                              <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                          </form>
+                        </div> -->
+                   
+                        
+                        <div class="sidebar-box categories text-center ftco-animate">
+                              <h2 class="heading mb-4 text-center"  style="font-family: arial;">출연작</h2>
+                              
+                              <img src="./movie1.jpg" alt="">
+                              <p style="font-family: arial; " class="font-weight-bold text-dark">사바하</p>
+                              <img src="./movie2.jpg" alt="">
+                              <p style="font-family: arial;"  class="font-weight-bold text-dark" >돈</p>
+                              <img src="./movie3.jpg" alt="">
+                              <p style="font-family: arial;"  class="font-weight-bold text-dark" >살인마 잭의집</p>
+                              
+                   
+                    </div>
+                </div>
+                
+              </div>
+
+           
+            </section>
+        
+         
+          
+
+
+
+          
+          <style>
+            #content{
+              padding: 40px 0 50px;
+              min-height: 670px;
+              width: 960px;
+              margin: auto;
+            }
+            #content.multi.photodata .coverdata {
+                overflow: hidden;
+                margin-left: -30px;
+                }
+                ul, menu, dir {
+                  display: block;
+                  list-style-type: disc;
+                  margin-block-start: 1em;
+                  margin-block-end: 1em;
+                  margin-inline-start: 0px;
+                  margin-inline-end: 0px;
+                  /*padding-inline-start: 40px;*/
+              }
+              li{
+                display: list-item;
+                position: relative;
+                float: left;
+                margin: 0 0 15px 15px; /*30px 30px*/
+                width: 300px;
+              }
+              a:link{
+                text-decoration: none;
+                color: black;
+              }
+              #content.multi.photodata .coverdata li .thumb {
+              display: block;
+              width: 300px;
+              height: 360px;
+                }
+                img {
+                border: 0px;
+                vertical-align: top;
+              }
+           .tit_box {
+    border: 1px solid #e3e3e3;
+    padding: 7px 12px 0 13px;
+    height: 103px;
+}
+ .ho_num {
+    font-weight: bold;
+    color: #000;
+    font-size: 25px;
+    border-bottom: 1px solid #efefef;
+    padding-bottom: 7px;
+    margin-bottom: 10px;
+    
+}
+#content.multi.photodata .coverdata li .tit_box .date {
+    font-size: 12px;
+    font-weight: normal;
+    color: #888;
+    margin-bottom: 3px;
+}
+ .coverpeople {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 7px;
+    font-size: 12px;
+}
+div{
+  font-size: 14px;
+    color: #545454;
+}
+          </style>
+        </div>
+
+
+          <footer class="footer">
+            <h2>Footer</h2>
+          </footer>
+
+             
+        <script>
+                var slideIndex = 1;
+                showDivs(slideIndex);
+                
+                function plusDivs(n) {
+                showDivs(slideIndex += n);
+                }
+                
+                function showDivs(n) {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                if (n > x.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = x.length} ;
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                }
+                x[slideIndex-1].style.display = "block";  
+                }
+  
+              var myIndex = 0;
+              carousel();
+  
+              function carousel() {
+                  var i;
+                  var x = document.getElementsByClassName("mySlides");
+                  for (i = 0; i < x.length; i++) {
+                  x[i].style.display = "none";  
+                  }
+                  myIndex++;
+                  if (myIndex > x.length) {myIndex = 1}    
+                  x[myIndex-1].style.display = "block";  
+                  setTimeout(carousel, 5000);
+              }
+      </script>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="js/google-map.js"></script>
+<script src="js/main.js"></script>
+    </body>
+</html>
