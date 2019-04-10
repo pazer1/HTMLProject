@@ -36,8 +36,8 @@ $(document).ready(function(){
 	
 	//for each slide 
 	$.each($('#slider-wrap ul li'), function() { 
-
-	   //create a pagination
+		sliderWidth = $('#slider-wrap').width();
+	   //create a pagination	
 	   var li = document.createElement('li');
 	   $('#pagination-wrap ul').append(li);	   
 	});
