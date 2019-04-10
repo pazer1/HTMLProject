@@ -561,19 +561,40 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
       width: 20%;
       border-radius:10px; 
       margin: 10px;
+      overflow: hidden;
   }
 
   .firstjoker{
     background-image: url(Images/joker1.jpg);
     background-size: cover;
+    overflow: hidden;
+    transition: 0.5s;
+    border-radius: 10px;
   }
+
+  .firstjoker:hover{
+    transform: scale(1.5);
+  }
+  .secondjoker:hover{
+    transform: scale(1.5);
+  }
+  .thirdjoker:hover{
+    transform: scale(1.5);
+  }
+
   .secondjoker{
     background-image: url(Images/joker2.jpg);
     background-size: cover;
+    overflow: hidden;
+    transition: 0.5s;
+    border-radius: 10px;
   }
   .thirdjoker{
     background-image: url(Images/joker3.jpg);
     background-size: cover;
+    overflow: hidden;
+    transition: 0.5s;
+    border-radius: 10px;
   }
 
   /* 포트폴리오 */
@@ -606,7 +627,6 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
 
 .portfolio-menu li {
     display: inline-block;
-  
     position: relative;
     margin-left: 15px;
     padding-bottom: 10px;
@@ -651,6 +671,7 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
     display: none;
     margin-left: 55px;
     height: 300px;
+
 }
 .show{
     display: inline-block;

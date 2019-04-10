@@ -108,9 +108,22 @@ function circleClick(position) {
         pos=position;
     }
     /* end of function circleClick */
-
-
 }
+
+// 팝업 비디오
+$('.popup-youtube').magnificPopup({type:'iframe'});
+$.extend(true, $.magnificPopup.defaults, {  
+    iframe: {
+        patterns: {
+            youtube: {
+                index: 'youtube.com/', 
+                id: 'v=', 
+                src: 'https://www.youtube.com/embed/%id%?autoplay=1' 
+            }
+        }
+    }
+});
+
 
 
 
