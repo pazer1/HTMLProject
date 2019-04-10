@@ -701,13 +701,11 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
     #article{
     width: 960px;
     }
-   .sidenav{
-       display: flex;
+   /* .sidenav{
        flex-direction: column;
        padding: 1px;
-       height: 3030px;
        margin-left: 20px;
-   }
+   } */
     .sideContent{
         margin-left: 10px;
         width: 380px;
@@ -715,6 +713,7 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
         position: fixed;
         top: 220px;
         border-radius: 10px;
+        margin-left: 20px;
         height: 500px;
         padding: 10px;
      }
