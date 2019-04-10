@@ -16,9 +16,10 @@
     <body>
     <header>
             <div id="hgroup">
-                <h1><a href="index.html">영화<span>리뷰</span> 공<span>작소</span></a></h1>
-                <h2>영화리뷰저장소</h2>
+                <h1 style="text-align:center"><a href="index.html">영화<span>리뷰</span> 공<span>작소</span></a></h1>
+                <h2 style="text-align:center">영화리뷰저장소</h2>
             </div>
+        
             <div class="header-container">
                 <nav class="main-menu">
                     <div class="dropdown-wrapper menu-button">		
@@ -53,11 +54,18 @@
                             <a class="menu-button" href="#">sample</a>
                         </div>
                     </div>
+                    <div class="dropdown-wrapper menu-button">		
+                            <a class="menu-button" href="#">회원가입</a>
+                        </div>
+                    <div class="dropdown-wrapper menu-button">		
+                            <a class="menu-button" href="#">로그인</a>
+                        </div>
                 </nav>
             </div>
+           
         </header>
           
-        <div id="wrapper">
+        <!-- <div id="wrapper">
                 <div id="slider-wrap">
                 <ul id="slider">
                     <li data-color="#1abc9c">
@@ -92,7 +100,6 @@
                     </li>
                 </ul>
                 
-                <!--controls-->
                 <div class="btns" id="next"><i class="fa fa-arrow-right"></i></div>
                 <div class="btns" id="previous"><i class="fa fa-arrow-left"></i></div>
                 <div id="counter"></div>
@@ -102,7 +109,23 @@
                 </ul>
                 </div>
             </div>
-        </div>
+        </div> -->
+
+        <div id="slider-main">
+
+                <!-- previous button -->
+            <button id="prev"><i class="fa fa-angle-double-left"></i></button>
+            
+                <!-- image container -->
+            <div id="slider"></div>
+            
+                <!-- next button -->
+                <button id="next"><i class="fa fa-angle-double-right"></i></button>
+            
+                <!-- small circles container -->
+                <div id="circles"></div>
+            
+            </div>
 
 
         <div class="content">
@@ -304,7 +327,7 @@
                 <div class="sidenav">
                     <div class="sideContent">
                         <div class="todaynew">
-                            <h4 style="font-weight:bold; margin-top: 10px;   color:white">오늘의 신작</h4>
+                            <h4 style="font-weight:bold; margin-top: 10px;   color:#003552">오늘의 신작</h4>
                             <hr style="margin:1px;">
                             <div >
                                 <iframe width="300px" height="280" src="https://www.youtube.com/embed/rzKcrJ77wBY" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
