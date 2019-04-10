@@ -144,7 +144,6 @@
 }
 
 #slider-wrap ul#slider li > div span{
-	font-family: Neucha, Arial, sans serif;
 	font-size:21px;
 }
 
@@ -297,6 +296,7 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
  .card {
     height: 300px;
     width: 320px;
+    margin-right: 10px;
     display: inline-block;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -388,7 +388,7 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
 	border-top: 1px solid #ddd;
     }
 
-.container{
+.portfolio-container{
     background: rgb(36, 34, 34);
     border-radius: 10px;
 }
@@ -448,7 +448,6 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
     display: flex;
     justify-content: flex-start;
     height: 1428px;
-    
 }
 
 .single-portfolio {
@@ -604,13 +603,7 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
 {
   margin:0
 }
-@media (max-width:991px)
-{
-  .site-footer [class^=col-]
-  {
-    margin-bottom:30px
-  }
-}
+
 @media (max-width:767px)
 {
   .site-footer
@@ -723,7 +716,7 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
         left:0;
         position:absolute;
         background-size:100%;
-        opacity:0.5!important;
+        opacity:0.4!important;
         filter:alpha(opacity=50);
         z-index:-1;
         border-radius: 10px;
@@ -748,8 +741,8 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
 
 
 
-@media (max-width: 600px) {
-  
+@media only screen and (max-width: 767px) {
+  /* 헤더 */
   .header-container {
     width: 100%;
     margin: 0;
@@ -759,7 +752,7 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
     height: 200px;
     align-items: flex-start;
   } 
-  
+
   .main-menu {   
     z-index: 1;
     flex-direction: column; 
@@ -767,45 +760,155 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
     height: 48px; 
     margin: 0;
     justify-content: space-between;
-  }
+    }
     
-  .main-menu > .menu-button {
-    width: 100%;
-  }
-  .sildImg{
-      height: 250px;
-      position: relative;
-  }
-  .sildImg .mySlides{
-      width: 100%;
-  }
-  footer{
-      width: 100%;
-      align-items: center;
-  }
-  .row-item{
-      flex-direction: column;
-      align-items: center;
-      height: 80%;
-  }
-  
-  .card{
-      margin: 0;
-  }
-  .card:hover .card-header  {
-    opacity: 0.8;
-    height: 10px;
-    background-image: url("shazam.jpg");
-}
-.card-header {
-    transition: 0.5s;
-    width: 100%;
-    border-radius: 15px 15px 0 0;
-    background-size: 100% 280px;
-    background-repeat: no-repeat;	
-}
-#article{
-      flex-direction: column;
-      
-  }
+/* 메뉴 드랍다운*/
+    .main-menu > .menu-button {
+        width: 100%;
+    }
+    
+/* 이미지 */
+    #wrapper{
+        width:500px;
+        margin:auto;
+        height:300px;
+        position:relative;
+        color:#fff;
+        text-shadow:rgba(0,0,0,0.1) 2px 2px 0px;
+        display: flex;	
+        border: 1px solid black;
+    }
+
+    #slider-wrap{
+        width:100%;
+        height:100%;
+        position:relative;
+        overflow:hidden;
+        display: flex;
+    }
+
+    #slider-wrap ul#slider li{
+        position:relative;
+        width:500px;
+        height:100%;
+    }
+
+/* 아티클 */
+    #article{
+        max-width: 767px;
+        width: 100%;
+        margin: auto;
+        flex-direction: column;
+    }
+    #hr-todayfilm{
+        text-align: center;
+    }
+
+/* 카드 */
+    .row-item{
+        flex-direction: column;
+        align-items: center;
+        height: 80%;
+    }
+
+    .card{
+        margin-top:2px;
+        width: 80%;
+        height: 200px;
+    }
+    
+    .card-header {
+        transition: 0.5s;
+        width: 100%;
+        height: 180px;
+        border-radius: 15px 15px 0 0;
+        background-size: 100% 280px;
+        background-repeat: no-repeat;	
+    }
+
+    .card-body{
+        height: 80px;
+        background:rgb(255, 248, 235);
+    }
+
+    /* 테스티 스타일 */
+    .testi {
+        text-align: center;
+        width: 80%;
+        height: 80%;
+        margin: auto;
+        margin-top: 10px;
+    }
+    .testi img {
+        margin: auto;
+        float: none;
+        display: block;
+    }
+    
+    .trailerP{
+        text-align: center;
+        background: black;
+        color: white;
+        border-radius: 10px;
+    }
+    .row-imgs{
+        display: flex;
+        justify-content: flex-start;
+        width:100%;
+        height: 100%;
+    }
+    .row{
+        padding:10px;
+    }
+    .single-portfolio {
+        height: 180px;
+        width: 180px;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    .single-portfolio-img {
+        overflow: hidden;
+        position: relative;
+        width:180px;
+        height: 180px;
+        border-radius: 10px;
+        margin: 1px;
+    }
+    .portfolio-content h2{
+        display: none;
+    }
+    
+    .single-portfolio-img img{
+        width:180px;
+        height: 180px;
+    }
+    /* 사이드 네비 */
+    .todaynew{
+        text-align: center;
+        background-image:url(./Images/weatheri.jpg); 
+        border-top-right-radius:10px; 
+        border-top-left-radius:10px; 
+    }
+    .sideContent{
+        width: 100%;
+        text-align: center;
+        top: 220px;
+        height: 500px;
+       
+        padding: 10px;
+     }
+    
+
+    .sidenavCard{
+        width:100%;
+        height: 160px;
+        align-self: center;
+        text-align: center;
+        padding-top: 20px;
+        background-color: #007bb6;
+        border-bottom-left-radius:10px; 
+        border-bottom-right-radius:10px; 
+    }
+
 }
