@@ -544,7 +544,6 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
 @media (min-width: 992px){
     #article{
     width: 960px;
-    background: red;
     }
    .sidenav{
        display: flex;
@@ -558,9 +557,10 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
         width: 380px;
         text-align: center;
         position: fixed;
-        top: 250px;
+        top: 220px;
         border-radius: 10px;
         height: 500px;
+        padding: 10px;
      }
      .sideContent:after {
         background-image:url("Images/weatheri.jpg");
@@ -577,7 +577,16 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
         height:100%;
     }
     
-    
+    .sidenavCard{
+        border-radius: 10px;
+        width:100%;
+        height: 100px;
+        align-self: center;
+        text-align: center;
+        padding-top: 20px;
+        background:rgba(212, 206, 193, 0.39);
+        text-decoration: none;
+    }
 
      .todaynew{
          z-index: 99;
