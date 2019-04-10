@@ -66,7 +66,8 @@ $(document).ready(function(){
 ************/
 function slideLeft(){
 	pos--;
-	$('#slider-wrap ul#slider').width(sliderWidth*totalSlides);
+	sliderWidth = $('#slider-wrap').width();
+	alert(sliderWidth);
 	if(pos==-1){ pos = totalSlides-1; }
 	$('#slider-wrap ul#slider').css('left', -(sliderWidth*pos)); 	
 	
@@ -81,7 +82,7 @@ function slideLeft(){
 *************/
 function slideRight(){
 	pos++;
-	$('#slider-wrap ul#slider').width(sliderWidth*totalSlides);
+	sliderWidth = $('#slider-wrap').width();
 	if(pos==totalSlides){ pos = 0; }
 	$('#slider-wrap ul#slider').css('left', -(sliderWidth*pos)); 
 	
