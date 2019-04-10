@@ -9,7 +9,7 @@
 }
 
 .content{
-    background-image:url("Images/hero-area.png");
+    background-image:url("Images/blossom.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -40,10 +40,32 @@
 #hgroup h1, #header #hgroup h2{font-weight:normal; font-style:normal; text-transform:none;}
 #hgroup h1{font-size:46px;}
 #hgroup h1 span{font-size:36px; text-transform:uppercase;}
-#hgroup h1 a{color:white;  }
+#hgroup h1 a{color:white; text-decoration: none  }
 #hgroup h2{font-size:12px;}
 
 
+.account{
+    display: flex;
+    position: absolute;
+    top: 2%;
+    right: 25%;
+    border: 1px solid yellowgreen;
+    border-radius:10px; 
+}
+.account .register{
+    margin: 5px;
+}
+.account .login{
+    margin: 5px;
+    
+}
+.account h6{
+    color: white;
+}
+
+.account a{
+    text-decoration: none !important;
+}
 
 
   /* 메뉴 css */
@@ -113,6 +135,7 @@
 /* Authored by Boaz James Otieno */
 
 #slider-main{
+    max-width: 1980px;
     width: 100%;
     overflow: hidden;
     display: relative;
@@ -367,41 +390,46 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
 }
 
 
-#hr-todayfilm,.row-bbs-title p{
-    line-height: 2em;
-    padding-left:2em;
-    font-size: 18px;
-}
 .row-bbs-title>p{
     color: white;
-    padding-top: 2px;
+    width: 100%;
+    padding: 5px;
+    background: black;
+    border-radius:10px; 
 }
 
 .row1{
     flex-basis: 100%;
     margin-top: 18px;
+    border-radius:10px 10px 0 0; 
 }
 
 .row-bbs-title{
     background: rgb(36, 34, 34);
-    padding-bottom:10px; 
-    border-radius: 10px;
+    padding:10px;
+    text-align: center;
 }
 
 #hr-todayfilm {
-    border: black solid 2px;
+    padding: 10px;
     width: 100%;
     color: white;
-    background: rgb(36, 34, 34);
-    border-radius: 10px;
- 
+    background: black;
+    border-radius: 10px 10px 0 0;;
+    margin: 0;
+    text-align: center;
 }
 
 
 /* 카드레이아웃 스타일 */
 .row-item{
+    padding: 10px;
     display: flex;
     justify-content: space-around;
+    background: rgb(36, 34, 34);
+    border-radius: 0 0 10px 10px ;
+    margin-bottom: 10px;
+
 }
 .row-imgs{
     flex-wrap: wrap;
@@ -448,7 +476,10 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
     padding: 10px 10px;
     line-height: 20px;
 }
-.card-bdoy-header h1 {
+
+
+
+.card-body-header h1 {
     font-size: 20px;
     font-weight: bold;
 }
@@ -472,11 +503,11 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
 /* 테스티 스타일 */
 .row-bbs{
     flex-direction: column;
+    border-radius: 10px;
 }
 .testi {
     border: 2px solid #ccc;
     background-color: #eee;
-    border-radius: 5px;
     padding: 16px;
     margin: 16px 0
   }
@@ -495,6 +526,56 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
     margin-right: 15px;
   }
 
+  .trailerP{
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    background: black;
+    border-radius: 10px 10px 0 0;
+    color: white;
+  }
+  .trailerP p{
+      margin: 0;
+  }
+
+  .trailer{
+    display: flex;
+    padding: 10px;
+    background: rgb(36, 34, 34);
+    height: 450px;
+    text-align: center;
+    margin: auto;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .trailerjoker{
+    height: 30%;
+    width: 100%; 
+    margin: 5px;
+    border-radius:10px; 
+  }
+
+  .trailerimg{
+      height: 100%;
+      width: 20%;
+      border-radius:10px; 
+      margin: 10px;
+  }
+
+  .firstjoker{
+    background-image: url(Images/joker1.jpg);
+    background-size: cover;
+  }
+  .secondjoker{
+    background-image: url(Images/joker2.jpg);
+    background-size: cover;
+  }
+  .thirdjoker{
+    background-image: url(Images/joker3.jpg);
+    background-size: cover;
+  }
+
   /* 포트폴리오 */
   hr {
 	margin: 0;
@@ -503,7 +584,7 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
 
 .portfolio-container{
     background: rgb(36, 34, 34);
-    border-radius: 10px;
+    border-radius:10px
 }
 
 
@@ -513,7 +594,7 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
         padding: 10px;
         width: 100%;
         background: black;
-        border-radius: 10px
+        border-radius: 10px 10px 0 0;
         }
 
     .portfolio-menu ul{
@@ -555,12 +636,14 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
 }
 .portfolio-content h2 {
     margin-top: 20px;
+    text-align: center;
+    color: white;
 }
 
 .row-imgs{
     display: flex;
     justify-content: flex-start;
-    height: 1428px;
+    height: 100%;
 }
 
 .single-portfolio {
@@ -577,7 +660,7 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
 	overflow: hidden;
 	position: relative;
     width:250px;
-    height: 300px;
+    height: 240px;
     border-radius: 10px;
 }
 .single-portfolio-img:hover .popup-youtube i {
@@ -865,11 +948,44 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
   *{
       width: 100%;
   }
+  /* 로그인 회원가입 */
+  .account{
+    display: flex;
+    top: 1%;
+    width: 160px;
+    right: 50%;
+    left: 50%;
+    border: none;
+  }
+
+  .account .register{
+    border: none;
+    margin: 2px;
+  }
+  .account .login{
+    border: none;
+    margin: 2px;
+  }
+
+  .account a:hover{
+    color: red !important;
+  }
+
+  #next{
+      margin: 0;
+  }
 
   .header-container {
     height: 200px;
     align-items: flex-start;
   } 
+  #circles{
+      margin: 0;
+      text-align: center;
+  }
+  .circles{
+      margin: 0;
+  }
 
   .main-menu {   
     z-index: 1;
@@ -879,7 +995,8 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
     margin: 0;
     justify-content: space-between;
     }
-    
+
+   
 /* 메뉴 드랍다운*/
     .main-menu > .menu-button {
         width: 100%;
@@ -945,7 +1062,7 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
     .card-header {
         transition: 0.5s;
         width: 100%;
-        height: 180px;
+        height: 100%;
         border-radius: 15px 15px 0 0;
         background-size: 100% 280px;
         background-repeat: no-repeat;	
@@ -959,6 +1076,10 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
     .card-body{
         height: 80px;
         background:rgb(255, 248, 235);
+    }
+    .card:hover .card-header  {
+        opacity: 0.9;
+        height: 10%;
     }
 
     /* 테스티 스타일 */
@@ -982,7 +1103,27 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
         text-align: center;
         background: black;
         color: white;
-        border-radius: 10px;
+        border-radius: 10px 10px 0 0;
+    }
+    .trailer{
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+ 
+    .trailerimg{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        background-size: 100px;
+        height: 100%;
+        justify-content: center;
+    }
+
+    .trailerjoker{
+        width: 250px;
+        background-size: 250px;
+        background-repeat: no-repeat;
     }
     .row-imgs{
         display: flex;
