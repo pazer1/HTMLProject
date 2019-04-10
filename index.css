@@ -542,6 +542,18 @@ h2{ color: #7f8c8d; font-family: Neucha, Arial, sans serif; font-size:18px; marg
 }
 
 
+@media (min-width: 992px){
+    #article{
+    width: 960px;
+    background: red;
+    }
+   
+     .sidenav{
+        margin-left: 100px;
+     } 
+}
+
+
 
 @media (max-width: 600px) {
   
