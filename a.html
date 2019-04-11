@@ -328,9 +328,10 @@
             height: 500px;
         }
 
-        *{
-            border: 1px solid red !important;
-        }
+        /* * {border: 1px solid red !important} */
+        
+        
+      
        
     </style>
 
@@ -475,12 +476,24 @@
 
             .sildImg{
               height: 250px;
-              position: relative;;
-              
+              position: relative;
+              width: 100%;
+            
           }
-          .sildImg .mySlides{
+          .mySlides{
               width: 100%;
           }
+
+          div{
+        font-size: 14px;
+        color: #545454;
+        }
+          
+
+         
+
+
+
          
         }
     </style>
@@ -550,9 +563,9 @@
 
     <!-- 네비 -->
     <div class="sildImg mt-3" style="position:relative; ">
-            <img class="mySlides" src="./movie6.jpg" width="1980px; " >
-            <img class="mySlides" src="./movie5.jpg" width="1980px;" >
-            <img class="mySlides" src="./movie4.jpg" width="1980px;"  >
+            <img class="mySlides" src="./images/movie6.jpg" width="1980px; " >
+            <img class="mySlides" src="./images/movie5.jpg" width="1980px;" >
+            <img class="mySlides" src="./images/movie4.jpg" width="1980px;"  >
             
             
             <a class="slidBtn_left" style="position:absolute;top:45%;left:20px;color: white;" onclick="plusDivs(-1)">❮</a>
@@ -561,19 +574,22 @@
 
 
 
+     
+
         <!-- 바디 -->
         <section class="ftco-section" >
                 <div class="container" >
+                        
                     
                 <div class="row" style="margin: 0;">
                   
                     <div class="col-lg-9" >
                         <div class="row" style="margin: 0;">
                            
-                                 <div class="col-md-4 ftco-animate" style=" border: 1px solid red; "  >
+                                 <div class="col-md-4 ftco-animate"   >
                                 
                                 
-                                    <div class="blog-entry" style="border: 1px solid blue; " >
+                                    <div class="blog-entry"  >
                                         
                                         
                                         <button class="btn btn-black py-2 mb-1">1</button>
@@ -687,35 +703,36 @@
                             <div class="sidebar-box p-4 about text-center ftco-animate" style="width: 100%;">
                               <h2 class="heading mb-4" style="font-family: arial;">이달의 배우</h2>
                               <img src="./actor.jpg" class="img-fluid" alt="Colorlib Template">
-                              <div class="text pt-4" style="text-align: left;">
+                              <div class="text pt-4" style="text-align: left; ">
                        
                                   
                                   <table>
                                       <tr>
-                                          <td style="padding-right: 20px; font-family: arial;">이름</td>
-                                          <td  style="font-family: arial;">유지태</td>
+                                          <td style=" font-family: arial; width: 30%;  ">이름</td>
+                                          
+                                          <td  style="font-family: arial; text-align: right; ">유지태</td>
                                           
                                       </tr>
                           
                                       <tr>
-                                          <td style="padding-right: 20px; font-family: arial;">성별</td>
-                                          <td style="font-family: arial;">남</td>
+                                          <td id="td" style="font-family: arial;width: 30%; ">성별</td>
+                                          <td style="font-family: arial; text-align: right">남</td>
                                        
                                       </tr>
                           
                                       <tr>
-                                              <td style="padding-right: 20px; font-family: arial;">생년월일</td>
-                                              <td style="font-family: arial;">1976-04-13</td>
+                                              <td  id="td" style=" font-family: arial;width: 30%;">생년월일</td>
+                                              <td style="font-family: arial; text-align: right;">1976-04-13</td>
                                            
                                        </tr>
                                        <tr>
-                                          <td style="padding-right: 20px; font-family: arial;">신장/체중</td>
-                                          <td style="font-family: arial;">186cm, 74kg</td>
+                                          <td id="td" style=" font-family: arial;width: 30%;" >신체</td>
+                                          <td style="font-family: arial; text-align: right;">186cm, 74kg</td>
                                        
                                    </tr>
                                    <tr>
-                                      <td style="padding-right: 20px; font-family: arial;">소속사</td>
-                                      <td style="font-family: arial;">지티비엔터테인먼트</td>
+                                      <td id="td" style=" font-family: arial;width: 30%;">소속사</td>
+                                      <td style="font-family: arial; text-align: right;">지티비엔터테인먼트</td>
                                    
                                </tr>
                                   </table>
@@ -730,11 +747,11 @@
                         <div class="sidebar-box categories text-center ftco-animate">
                               <h2 class="heading mb-4 text-center"  style="font-family: arial;">출연작</h2>
                               
-                              <img src="./movie1.jpg" alt="">
+                              <img src="./images/movie1.jpg" alt="">
                               <p style="font-family: arial; " class="font-weight-bold text-dark">사바하</p>
-                              <img src="./movie2.jpg" alt="">
+                              <img src="./images/movie2.jpg" alt="">
                               <p style="font-family: arial;"  class="font-weight-bold text-dark" >돈</p>
-                              <img src="./movie3.jpg" alt="">
+                              <img src="./images/movie3.jpg" alt="">
                               <p style="font-family: arial;"  class="font-weight-bold text-dark" >살인마 잭의집</p>
                               
                    
@@ -842,6 +859,11 @@
               setTimeout(carousel, 5000);
           }
   </script>
+
+  
+
+
+      
 
 
 <script src="js/jquery.min.js"></script>
