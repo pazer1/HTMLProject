@@ -115,6 +115,11 @@
 }
 
 
+.table-row{
+    cursor:pointer;
+    }
+
+
 /* 드랍다운 메뉴 css */
 .drop-menu {
     display: flex;
