@@ -3,151 +3,213 @@
     <head>
         <title></title>
         <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <link rel="stylesheet" href="contact.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+        <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, user-scalable=no">
     </head>
-    <body>
-        <div class="card">
-            <div class="card-header">cardheader</div>
-            <div class="card-body">card body</div>
-            <div class="card-footer">cardfooter</div>
-        </div>
-        <hr>
-        <!-- 카드도 배경지정 가능 - 문맥에 맞는 -->
-        <div class="card bg-primary">
-            <div class="card-body">1</div>
-        </div>
-        <div class="card bg-danger text-white mt-1">
-            <div class="card-body">2</div>
-        </div>
-        <div class="card bg-secondary">
-            <div class="card-danger">3</div>
-        </div>
-        <hr>
-        <!-- 카드 스타일 레이아웃 -->
 
-        <!-- Title, text and link를 가진 레이아웃 -->
-        <div class="card">
-            <div class="card-body">
-                <h4>Card Title</h4>
-                <p>Card layout example</p>
-                <a href="#">Link A</a>
-                <a href="#">Link B</a>
-            </div>
-        </div>
-        <hr>
-        <!-- 부트 스트랩이 제공하는 스타일을 적용 -->
-        <div class="card">
-                <div class="card-body">
-                    <h4>Card Title</h4>
-                    <p>Card layout example</p>
-                    <a class="card-link" href="#">Link A</a>
-                    <a class="card-link" href="#">Link B</a>
-                </div>
-            </div>
-            <hr>
-            <!-- 카드안에 이미지가 삽입되어 있는 레이아웃 -->
-            <div class="card">
-                <div class="card-body">
-                    <img src="./Images/joker1.jpg" alt="">
-                    <h4>joker </h4>
-                    <p>moana is very good movie</p>
-                    <a href="#">go moana</a>
-                </div>
-            </div>
-            <hr>
-            <!-- 부트스트랩이 제공하는 이미지 삽입 스타일 -->
-            <div class="card">
-                <!-- 카드 상단 이미지 -->
-                <img src="Images/joker1.jpg" alt="" class="card-img-top">
-            </div>
-            <!-- 이미지 밑에 병역 -->
-            <div class="card-body">
-                    <h4 class="card-title">joker </h4>
-                    <p class="card-text">moana is very good movie</p>
-                    <a class="btn btn-primary" href="#">go moana</a>
-            </div>
-            <br>
-            <!-- 너비지정 -->
-            <div class="card" style="width:300px">
-                    <!-- 카드 상단 이미지 -->
-                    <img src="Images/joker1.jpg" alt="" class="card-img-top">
-                </div>
-                <!-- 이미지 밑에 병역 -->
-                <div class="card-body">
-                        <h4 class="card-title">joker </h4>
-                        <p class="card-text">moana is very good movie</p>
-                        <a class="btn btn-primary" href="#">go moana</a>
-                </div>
+    <style>
 
-                <br>
-                <!-- 너비지정 -->
-                <div class="card" style="width:300px">
-                        <!-- 카드 상단 이미지 -->
-                    </div>
-                    <!-- 이미지 밑에 병역 -->
-                    <div class="card-body" style="width:300px">
-                            <h4 class="card-title">joker </h4>
-                            <p class="card-text">moana is very good movie</p>
-                            <a class="btn btn-primary" href="#">go moana</a>
-                            <img src="Images/joker1.jpg" alt="" class="card-img-bottom">
-
-                    </div>
-                <hr>
-                <!-- 위의 예제는 링크를 선택하여 실행되지만 -->
-                <!-- 카드 자체를 클릭하여 링크가 실행되도록 할 수도 있음. -->
-                <div class="card" style="width:300px">
-                        <!-- 카드 상단 이미지 -->
-                    </div>
-                    <!-- 이미지 밑에 병역 -->
-                    <div class="card-body" style="width:300px">
-                            <h4 class="card-title">joker </h4>
-                            <p class="card-text">moana is very good movie</p>
-                            <a class="btn btn-primary stretched-link" href="#">go moana</a>
-                            <img src="Images/joker1.jpg" alt="" class="card-img-bottom">
-
-                    </div>
-                    <hr>
-                    <!-- 카드에 삽입된 이미지를 배경처럼 -->
-                    <!-- 본문 영역이 이미지에 overlay되도록 -->
-                    <div class="card">
-                        <img src="./Images/movieus.jpg" alt="" class="card-img-top">
-
-                        <div class="card-body card-img-overlay text-white" style="width:300px">
-                                <h4 class="card-title">joker </h4>
-                                <p class="card-text">moana is very good movie</p>
-                                <a class="btn btn-primary stretched-link" href="#">go moana</a>
-                                <img src="Images/joker1.jpg" alt="" class="card-img-bottom">
+       
     
+    </style>
+
+    <body>
+      
+            <header>
+                <div id="hgroup">
+                    <h1 style="text-align:center"><a href="index.html">영화<span>리뷰</span> 공<span>작소</span></a></h1>
+                    <h2 style="text-align:center">영화리뷰저장소</h2>
+                </div>
+                <div class="account">
+                    <div class="login">
+                        <a href="register.html">
+                            <h6>로그인</h6>
+                        </a>
+                    </div>
+                    <div class="register">
+                        <a href="register.html">
+                            <h6>회원가입</h6>
+                        </a>
+                    </div>
+                </div>
+                <div class="header-container">
+                    <nav class="main-menu">
+                        <div class="dropdown-wrapper menu-button">
+                            <a class="menu-button" href="#">현재 상영작</a>
+        
+                        </div>
+        
+                        <div class="dropdown-wrapper menu-button">
+                            <a class="menu-button" href="#">사이트 소개</a>
+                        </div>
+        
+                        <div class="dropdown-wrapper menu-button">
+                            <a class="menu-button" href="#">영화리뷰</a>
+        
+                            <div class="drop-menu">
+        
+                                <a class="menu-button" href="#">한국 영화</a>
+                                <a class="menu-button" href="#">서양 영화</a>
+                                <a class="menu-button" href="#">애니메이션</a>
+        
+        
+                            </div>
+                        </div>
+        
+                        <div class="dropdown-wrapper menu-button">
+        
+                            <a class="menu-button" href="#">Contact</a>
+        
+                            <div class="drop-menu">
+                                <a class="menu-button" href="#">고객건의</a>
+                                <a class="menu-button" href="#">sample</a>
+                                <a class="menu-button" href="#">sample</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+        
+
+        <section class="my-2">
+                <h2 class="h1-responsive font-weight-bold text-center mb-5 py-5 bg-info progress-bar-striped  text-white" >Contact us</h2>
+        <div class="container">
+        <p class="text-center w-responsive mx-auto alert alert-danger">이 사이트를 통한 어떠한 수익성 창출도 없을 것이며 저작권에 관한 법률을 어길 의도 또 한 없습니다. 저희는 무고합니다.</p>
+
+      
+        <div class="row">
+      
+          <div class="col-lg-5">
+      
+            <div class="card">
+              <div class="card-body">
+                <!-- Header -->
+                <div class="card-header badge badge-primary full-width shadow" style="display:block">
+                  <h3 class="mt-2 "><i class="fas fa-envelope"></i> Write To</h3>
+                </div>
+                <p class="dark-grey-text "></p>
+                <!-- Body -->
+                <div class="md-form">
+                  <i class="fas fa-user prefix grey-text"></i>
+                  <input type="text" id="form-name" class="form-control">
+                  <label class="badge badge-info shadow-sm" for="form-name">이름</label>
+                </div>
+                <div class="md-form ">
+                  <i class="fas fa-envelope prefix grey-text"></i>
+                  <input type="text" id="form-email" class="form-control">
+                  <label class="badge badge-info shadow-sm" for="form-email">이메일</label>
+                </div>
+                <div class="md-form">
+                  <i class="fas fa-tag prefix grey-text"></i>
+                  <input type="text" id="form-Subject" class="form-control">
+                  <label class="badge badge-info shadow-sm" for="form-Subject">제목</label>
+                </div>
+                <div class="md-form">
+                  <i class="fas fa-pencil-alt prefix grey-text"></i>
+                  <textarea id="form-text" class="form-control md-textarea" rows="3"></textarea>
+                  <label class="badge badge-info shadow-sm" for="form-text">내용</label>
+                </div>
+                <div class="text-center">
+                  <button class="btn btn-primary shadow">보내기</button>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+      
+          <div class="col-lg-7">
+      
+            <div id="map-container-section" class="z-depth-1-half map-container-section mb-4 rounded" style="height: 400px">
+              <iframe src="https://maps.google.com/maps?q=seoul&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                style="border:0" allowfullscreen></iframe>
+            </div>
+            <div class="row text-center">
+              <div class="col-md-4">
+                <a class="btn-floating ">
+                  <i class="fas fa-map-marker-alt"></i>
+                </a>
+                <p>왕십리</p>
+                <p class="mb-md-0 badge badge-info shadow-sm">미래능력개발교육원</p>
+              </div>
+              <div class="col-md-4 ">
+                <a class="btn-floating">
+                  <i class="fas fa-phone"></i>
+                </a>
+                <p>010-123-456</p>
+                <p class="mb-md-0 badge badge-info shadow-sm">월요일부터 금요일까지</p>
+              </div>
+              <div class="col-md-4">
+                <a class="btn-floating">
+                  <i class="fas fa-envelope"></i>
+                </a>
+                <p>mhri@gmail.com</p>
+                <p class="mb-0 badge badge-info shadow-sm">mhri@gmail.com</p>
+              </div>
+            </div>
+      
+          </div>
+        </div>
+    </div>
+      </section>
+            <footer class="site-footer">
+                <div class="footer-container">
+                    <div class="row footer-row" style="display:flex; justify-content:space-around">
+                        <div class="col-sm-12 col-md-6">
+                            <h6>About</h6>
+                            <p class="text-justify">영화리뷰 공작소
+                                <i>영화리뷰 사이트 </i>
+                                <br>
+                                <hr>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate delectus quidem
+                                obcaecati quas architecto inventore vero? Aut in, amet, vitae fugiat dolor assumenda atque
+                                vel provident tempora asperiores eum eius.</p>
+                        </div>
+        
+                        <div class=" footer-party">
+                            <h6>조원</h6>
+                            <ul class="footer-party">
+                                <li><a href="#">고준성</a></li>
+                                <li><a href="#">고승환</a></li>
+                                <li><a href="#">임승택</a></li>
+                                <li><a href="#">류태우</a></li>
+                            </ul>
+                        </div>
+        
+                        <div class="footer-link">
+                            <h6>Quick Links</h6>
+                            <ul class="footer-links">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">한국영화</a></li>
+                                <li><a href="#">서양영화</a></li>
+                                <li><a href="#">애니메이션</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <hr>
-                    <!-- 카드를 여러개 배치 -->
-                    <!-- 여러개를 colum으로 -->
-                    <div class="card-columns">
-                            <div class="card bg-primary text-white mt1">
-                                <div class="card-body">Hello world</div>
-                            </div>
-                            <div class="card bg-secondary text-white mt1">
-                                <div class="card-body">Hello world</div>
-                            </div>
-           
-                            <div class="card bg-info text-white mt1">
-                                <div class="card-body">Hello world</div>
-                            <div class="card bg-danger text-white">
-                                <div class="card-body">Hello world</div>
-                            </div>
-                            <div class="card bg-dark text-white mt1">
-                                <div class="card-body">Hello world</div>
-                            </div>
-                            <div class="card bg-warning text-white mt1">
-                                <div class="card-body">Hello world</div>
-                            </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                            <p class="copyright-text">Copyright &copy; 2019 All Rights Reserved by
+                                <a href="#">우리조</a>.
+                            </p>
+                        </div>
+        
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <ul class="social-icons">
+                                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i>face</a></li>
+                                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i>twit</a></li>
+                                <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i>git</a></li>
+                                <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i>linked</a></li>
+                            </ul>
+                        </div>
                     </div>
-               
-            </div>
-                    
+                </div>
+            </footer>
     </body>
 </html>
