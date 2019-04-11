@@ -407,6 +407,9 @@ h2 {
                 justify-content: space-between;
             }
 
+            .writetitle{
+                display: none !important;
+            }
 
             /* 풋터 */
             .site-footer {
