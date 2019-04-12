@@ -311,9 +311,9 @@
                 width: 100%;
                 margin: 0;
             }
-            /* * {
+            .header-container *{
                 width: 100%;
-            } */
+            }
             /* 로그인 회원가입 */
             .account {
                 display: flex;
@@ -352,6 +352,9 @@
             /* 풋터 */
             .site-footer {
                 padding-bottom: 0
+            }
+            .site-footer *{
+                width: 100%;
             }
             .site-footer .copyright-text,
             .site-footer .social-icons {
@@ -502,21 +505,19 @@
     <!-- 헤더 -->
 
     
-    <div class="container">
+    <div class="maincon">
             
         <style>
-            .container{
+            .maincon{
                 width: 960px;
                 margin: auto;
-            }
-            .container{
                 font-size: 0.9em
             }
-            .container ul{
+            .maincon ul{
                 list-style: none;
                 border-bottom: 1px solid darkred;
             }
-            .container li{
+            .maincon li{
                 height: 50px;
                 background-color: beige;
                 border: 1px solid darkred;
@@ -582,6 +583,7 @@
                 background-color: darkred;
                 border: none;
                 color:#fff;
+                margin-right: 10px;
                 padding: 10px 0;
                 text-align: center;
                 text-decoration: none;
@@ -595,11 +597,11 @@
             }
 
             @media (max-width:767px){
-                .container{
+                .maincon{
                     width: 100%;
                     margin: auto;
                 }
-                .container li{
+                .maincon li{
                     height: 70px;
                 }
                 .floated{
@@ -612,7 +614,7 @@
                     display: table-cell;
                     vertical-align: middle;
                 }
-                .container button{
+                .maincon button{
                     width: 100px;
                 }
                 .pnouter{

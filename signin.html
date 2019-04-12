@@ -307,13 +307,13 @@
     <!-- 반응형 -->
     <style>
         @media only screen and (max-width: 767px) {
+            .header-container *{
+                width: 100%;
+            }
             .header-container {
                 width: 100%;
                 margin: 0;
             }
-            /* * {
-                width: 100%;
-            } */
             /* 로그인 회원가입 */
             .account {
                 display: flex;
@@ -350,6 +350,9 @@
                 justify-content: space-between;
             }
             /* 풋터 */
+            .site-footer *{
+                width: 100%;
+            }
             .site-footer {
                 padding-bottom: 0
             }
@@ -502,10 +505,13 @@
     <!-- 헤더 -->
 
     
-    <div class="container">
+    <div class="maincon">
             
         <style>
-            .container{
+            .maincon *{
+                margin: 0;
+            }
+            .maincon{
                 width: 600px;
                 margin: auto;
                 margin-bottom: 20px;
@@ -562,7 +568,7 @@
             }
 
             @media (max-width:767px){
-                .container{
+                .maincon{
                     width: 100%;
                     margin: auto;
                     font-size: 0.9em;
