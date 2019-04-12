@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title>Moviewer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+        
+        <style>
+        * {
+            box-sizing: border-box;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1em;
+        }
+        /* 헤더 css */
+        .header-container {
+            width: 100%;
+            max-width: 1980px;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            background: rgb(43, 40, 40);
+            justify-content: center;
+            position: relative;
+        }
+        /* 타이틀과, 부타이틀 그룹 css */
+        #hgroup {
+            width: 100%;
+            max-width: 1980px;
+            position: relative;
+            padding: 45px 0 40px;
+            margin: auto;
+            height: 156px;
+            background: rgb(36, 34, 34);
+        }
+        #hgroup h1,
+        #header #hgroup h2 {
+            font-weight: normal;
+            font-style: normal;
+            text-transform: none;
+        }
+        #hgroup h1 {
+            font-size: 46px;
+        }
+        #hgroup h1 span {
+            font-size: 36px;
+            text-transform: uppercase;
+        }
+        #hgroup h1 a {
+            color: white;
+            text-decoration: none
+        }
+        #hgroup h2 {
+            font-size: 12px;
+            color: pink;
+        }
+        .account {
+            display: flex;
+            position: absolute;
+            top: 2%;
+            right: 25%;
+            border: 1px solid yellowgreen;
+            border-radius: 10px;
+        }
+        .account .register {
+            margin: 5px;
+        }
+        .account .login {
+            margin: 5px;
+        }
+        .account h6 {
+            color: white;
+        }
+        .account a {
+            text-decoration: none !important;
+        }
+        /* 메뉴 css */
+        .main-menu {
+            width: 100%;
+            z-index: 1;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            overflow: visible;
+            max-width: 960px;
+            align-items: flex-start;
+            height: 48px;
+        }
+        .main-menu a {
+            width: 100%;
+            color: white;
+            text-align: center;
+            align-content: center;
+            padding: .75em 1em;
+            display: block;
+            border-bottom: 2px solid #ddd;
+        }
+        .main-menu a:hover {
+            color: #c14400;
+            border-bottom-color: #c14400;
+        }
+        /* 드랍다운 메뉴 css */
+        .drop-menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            transition: max-height .4s, opacity .3s;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .drop-menu>.menu-button {
+            height: 100%;
+            transition: transform .4s;
+            transform: translateY(-300%);
+            background: #221d1dab;
+        }
+        .dropdown-wrapper:hover>.menu-button {
+            color: #c14400;
+            background: #333;
+        }
+        .dropdown-wrapper:hover .drop-menu {
+            max-height: 300px;
+            opacity: 1;
+        }
+        .dropdown-wrapper:hover>.drop-menu .menu-button {
+            transform: translateY(0%);
+        }
+        
+       
+    
+        .site-footer {
+            background-color: #26272b;
+            padding: 45px 0 20px;
+            font-size: 15px;
+            line-height: 24px;
+            color: #737373;
+        }
+        .footer-container {
+            max-width: 960px;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .site-footer hr {
+            border-top-color: #bbb;
+            opacity: 0.5
+        }
+        .site-footer hr.small {
+            margin: 20px 0
+        }
+        .site-footer h1,
+        h2 {
+            text-shadow: none;
+            text-align: center;
+        }
+        .site-footer h1 {
+            color: #666;
+            text-transform: uppercase;
+            font-size: 36px;
+        }
+        .site-footer h2 {
+            color: #7f8c8d;
+            font-family: Arial, ;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .site-footer h1,
+        h2 {
+            text-shadow: none;
+            text-align: center;
+        }
+        .site-footer h1 {
+            color: #666;
+            text-transform: uppercase;
+            font-size: 36px;
+        }
+        .site-footer h2 {
+            color: #7f8c8d;
+            font-family: Neucha, Arial, sans serif;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .site-footer h6 {
+            color: #fff;
+            font-size: 16px;
+            text-transform: uppercase;
+            margin-top: 5px;
+            letter-spacing: 2px
+        }
+        .site-footer a {
+            color: #737373;
+        }
+        .site-footer a:hover {
+            color: #3366cc;
+            text-decoration: none;
+        }
+        .social-icons {
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none
+        }
+        .social-icons li {
+            display: inline-block;
+            margin-bottom: 4px
+        }
+        .social-icons li.title {
+            margin-right: 15px;
+            text-transform: uppercase;
+            color: #96a2b2;
+            font-weight: 700;
+            font-size: 13px
+        }
+        .social-icons a {
+            background-color: #eceeef;
+            color: #818a91;
+            font-size: 16px;
+            display: inline-block;
+            line-height: 44px;
+            width: 44px;
+            height: 44px;
+            text-align: center;
+            margin-right: 8px;
+            border-radius: 100%;
+            -webkit-transition: all .2s linear;
+            -o-transition: all .2s linear;
+            transition: all .2s linear
+        }
+        .social-icons a:active,
+        .social-icons a:focus,
+        .social-icons a:hover {
+            color: #fff;
+            background-color: #29aafe
+        }
+        .social-icons.size-sm a {
+            line-height: 34px;
+            height: 34px;
+            width: 34px;
+            font-size: 14px
+        }
+        .social-icons a.facebook:hover {
+            background-color: #3b5998
+        }
+        .social-icons a.twitter:hover {
+            background-color: #00aced
+        }
+        .social-icons a.linkedin:hover {
+            background-color: #007bb6
+        }
+        .social-icons a.dribbble:hover {
+            background-color: #ea4c89
+        }
+        .footer-links {
+            padding-left: 0;
+            list-style: none
+        }
+        .footer-links li {
+            display: block
+        }
+        .footer-links a {
+            color: #737373
+        }
+        .footer-links a:active,
+        .footer-links a:focus,
+        .footer-links a:hover {
+            color: #3366cc;
+            text-decoration: none;
+        }
+        .footer-links.inline li {
+            display: inline-block
+        }
+        .site-footer .social-icons {
+            text-align: right
+        }
+        .site-footer .social-icons a {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            margin-left: 6px;
+            margin-right: 0;
+            border-radius: 100%;
+            background-color: #33353d
+        }
+        .copyright-text {
+            margin: 0
+        }
+        
+        .sildImg{
+            display: flex;
+            height: 500px;
+        }
+    </style>
+
+
+    <!-- 반응형 -->
+    <style>
+        @media only screen and (max-width: 767px) {
+            .header-container {
+                width: 100%;
+                margin: 0;
+            }
+          
+            /* 로그인 회원가입 */
+            .account {
+                display: flex;
+                top: 1%;
+                width: 160px;
+                right: 50%;
+                left: 50%;
+                border: none;
+            }
+            .account .register {
+                border: none;
+                margin: 2px;
+            }
+            .account .login {
+                border: none;
+                margin: 2px;
+            }
+            .account a:hover {
+                color: red !important;
+            }
+            #next {
+                margin: 0;
+            }
+            .header-container {
+                height: 200px;
+                align-items: flex-start;
+            }
+            .main-menu {
+                z-index: 1;
+                flex-direction: column;
+                align-items: flex-start;
+                height: 48px;
+                margin: 0;
+                justify-content: space-between;
+                
+            }
+            /* 풋터 */
+            .site-footer {
+                padding-bottom: 0
+            }
+            .site-footer .copyright-text,
+            .site-footer .social-icons {
+                text-align: center
+            }
+            .social-icons {
+                padding-left: 0;
+                margin-bottom: 0;
+                list-style: none
+            }
+            .social-icons li {
+                display: inline-block;
+                margin-bottom: 4px
+            }
+            .social-icons li.title {
+                margin-right: 15px;
+                text-transform: uppercase;
+                color: #96a2b2;
+                font-weight: 700;
+                font-size: 13px
+            }
+            .social-icons a {
+                background-color: #eceeef;
+                color: #818a91;
+                font-size: 16px;
+                display: inline-block;
+                line-height: 44px;
+                width: 44px;
+                height: 44px;
+                text-align: center;
+                margin-right: 8px;
+                border-radius: 100%;
+                -webkit-transition: all .2s linear;
+                -o-transition: all .2s linear;
+                transition: all .2s linear
+            }
+            .social-icons a:active,
+            .social-icons a:focus,
+            .social-icons a:hover {
+                color: #fff;
+                background-color: #29aafe
+            }
+            .social-icons.size-sm a {
+                line-height: 34px;
+                height: 34px;
+                width: 34px;
+                font-size: 14px
+            }
+            .social-icons a.facebook:hover {
+                background-color: #3b5998
+            }
+            .social-icons a.twitter:hover {
+                background-color: #00aced
+            }
+            .social-icons a.linkedin:hover {
+                background-color: #007bb6
+            }
+            .social-icons a.dribbble:hover {
+                background-color: #ea4c89
+            }
+            .footer-row {
+                display: flex;
+                flex-direction: row;
+            }
+            .footer-party {
+                display: inline;
+                width: 100px;
+            }
+            .footer-link {
+                display: inline;
+                width: 100px;
+            }
+            .social-icons {
+                display: flex;
+                flex-direction: row;
+            }
+            /* 메뉴 드랍다운*/
+            .main-menu>.menu-button {
+                width: 100%;
+            }
+            .social-icons li.title {
+                display: block;
+                margin-right: 0;
+                font-weight: 600;
+            }
+            .blog-entry{
+             
+                text-align: center;}
+            .sildImg{
+              height: 250px;
+              position: relative;;
+              
+          }
+          .sildImg .mySlides{
+              width: 100%;
+          }
+         
+  
+         
+        }
+  
+     
+        </style>
+
+
+        <style>
+              .site-footer {
+            background-color: #26272b;
+            padding: 45px 0 20px;
+            font-size: 15px;
+            line-height: 24px;
+            color: #737373;
+        }
+        .footer-container {
+            max-width: 960px;
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .site-footer hr {
+            border-top-color: #bbb;
+            opacity: 0.5
+        }
+        .site-footer hr.small {
+            margin: 20px 0
+        }
+        .site-footer h1,
+        h2 {
+            text-shadow: none;
+            text-align: center;
+        }
+        .site-footer h1 {
+            color: #666;
+            text-transform: uppercase;
+            font-size: 36px;
+        }
+        .site-footer h2 {
+            color: #7f8c8d;
+            font-family: Arial, ;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .site-footer h1,
+        h2 {
+            text-shadow: none;
+            text-align: center;
+        }
+        .site-footer h1 {
+            color: #666;
+            text-transform: uppercase;
+            font-size: 36px;
+        }
+        .site-footer h2 {
+            color: #7f8c8d;
+            font-family: Neucha, Arial, sans serif;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .site-footer h6 {
+            color: #fff;
+            font-size: 16px;
+            text-transform: uppercase;
+            margin-top: 5px;
+            letter-spacing: 2px
+        }
+        .site-footer a {
+            color: #737373;
+        }
+        .site-footer a:hover {
+            color: #3366cc;
+            text-decoration: none;
+        }
+        .social-icons {
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none
+        }
+        .social-icons li {
+            display: inline-block;
+            margin-bottom: 4px
+        }
+        .social-icons li.title {
+            margin-right: 15px;
+            text-transform: uppercase;
+            color: #96a2b2;
+            font-weight: 700;
+            font-size: 13px
+        }
+        .social-icons a {
+            background-color: #eceeef;
+            color: #818a91;
+            font-size: 16px;
+            display: inline-block;
+            line-height: 44px;
+            width: 44px;
+            height: 44px;
+            text-align: center;
+            margin-right: 8px;
+            border-radius: 100%;
+            -webkit-transition: all .2s linear;
+            -o-transition: all .2s linear;
+            transition: all .2s linear
+        }
+        .social-icons a:active,
+        .social-icons a:focus,
+        .social-icons a:hover {
+            color: #fff;
+            background-color: #29aafe
+        }
+        .social-icons.size-sm a {
+            line-height: 34px;
+            height: 34px;
+            width: 34px;
+            font-size: 14px
+        }
+        .social-icons a.facebook:hover {
+            background-color: #3b5998
+        }
+        .social-icons a.twitter:hover {
+            background-color: #00aced
+        }
+        .social-icons a.linkedin:hover {
+            background-color: #007bb6
+        }
+        .social-icons a.dribbble:hover {
+            background-color: #ea4c89
+        }
+        .footer-links {
+            padding-left: 0;
+            list-style: none
+        }
+        .footer-links li {
+            display: block
+        }
+        .footer-links a {
+            color: #737373
+        }
+        .footer-links a:active,
+        .footer-links a:focus,
+        .footer-links a:hover {
+            color: #3366cc;
+            text-decoration: none;
+        }
+        .footer-links.inline li {
+            display: inline-block
+        }
+        .site-footer .social-icons {
+            text-align: right
+        }
+        .site-footer .social-icons a {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            margin-left: 6px;
+            margin-right: 0;
+            border-radius: 100%;
+            background-color: #33353d
+        }
+        .copyright-text {
+            margin: 0
+        }
+        
+      
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+    </head>
+
+    <body>
+
+            <header>
+                    <div id="hgroup">
+                            <h1 style="text-align:center"><a href="index.html">영화<span>리뷰</span> 공<span>작소</span></a></h1>
+                            <h2 style="text-align:center">영화리뷰저장소</h2>
+                        </div>
+                        <div class="account">
+                            <div class="login">
+                                <a href="signin.html">
+                                <h6>로그인</h6>
+                                </a>
+                            </div>
+                            <div class="register">
+                                <a href="signup.html">
+                                    <h6>회원가입</h6> 
+                               </a>
+                            </div>
+                        </div>
+                        <div class="header-container">
+                            <nav class="main-menu">
+                                <div class="dropdown-wrapper menu-button">		
+                                    <a class="menu-button" href="screening.html">현재 상영작</a>
+                                        
+                                </div>
+                                
+                                <div class="dropdown-wrapper menu-button">		
+                                    <a class="menu-button" href="intro2.html">사이트 소개</a>
+                                </div>
+                        
+                                <div class="dropdown-wrapper menu-button">		
+                                    <a class="menu-button" href="#" >영화리뷰</a>
+                                        
+                                    <div class="drop-menu">
+                                        
+                                        <a class="menu-button" href="korean.html">한국 영화</a>
+                                        <a class="menu-button" href="western.html">서양 영화</a>
+                                        <a class="menu-button" href="aninmation.html">애니메이션</a>
+                                        
+                                    </div>
+                                </div>
+                        
+                                <div class="dropdown-wrapper menu-button">
+                                        
+                                    <a class="menu-button" href="Contact.htm">Contact</a>
+                                        
+                                    <div class="drop-menu">
+                                        <a class="menu-button" href="Contact.html">고객건의</a>
+                                        <a class="menu-button" href="#">sample</a>
+                                        <a class="menu-button" href="#">sample</a>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                </header>
+    
+        <!-- <div id="aaa" style="width: 960px; height: 1800px;  margin: auto;" > -->
+
+                <div class="container">
+                        <div class="row">
+                          <div class="col-sm-9" >
+                        <article> 
+                          <!-- 여기서 아이템 들어 가는곳 -->
+                         
+                          <div class="container mt-3">
+                          
+                              <div class="row" style="margin-top: 100px; ">
+                                  <div class="card scale " style="width: 15rem; margin-right: auto; margin-left: auto;" >
+                  
+                                      <img src="./ani_imges/img01.jpg" alt="moana01" class="card-img-top">
+                  
+                                      <div class="card-body">
+                                          <h5 class="card-title">괴물 아이</h5>
+                                          <p class="card-text">함께라면 뭐든지 할 수 있어!!</p>
+                                          <a href="" class="btn btn-primary">Go review page</a>
+                                      </div>
+                                  </div>
+                                  <div class="card scale" style="width: 15rem; margin-right: auto; margin-left: auto;">
+                  
+                                      <img src="./ani_imges/img02.jpg" alt="moana02" class="card-img-top">
+                  
+                                      <div class="card-body">
+                                          <h5 class="card-title">목소리의 형태</h5>
+                                          <p class="card-text">신체의 장애와 마음의 장애를 넘어..</p>
+                                          <a href="" class="btn btn-primary">Go review page</a>
+                                      </div>
+                                  </div>
+                  
+                                  <div class="card scale" style="width: 15rem; margin-right: auto; margin-left: auto;">
+                  
+                                          <img src="./ani_imges/img03.jpg" alt="moana02" class="card-img-top">
+                      
+                                          <div class="card-body">
+                                              <h5 class="card-title">모아나</h5>
+                                              <p class="card-text">"What can I say except "you're welcome"?</p>
+                                              <a href="" class="btn btn-primary">Go review page</a>
+                                          </div>
+                                      </div>
+                                   
+                              </div>
+                              <div class="row mt-5">
+                                  <div class="card scale" style="width: 15rem; margin-right: auto; margin-left: auto;">
+                  
+                                      <img src="./ani_imges/img04.jpg" alt="moana01" class="card-img-top">
+                  
+                                      <div class="card-body"class="card_left">
+                                          <h5 class="card-title">너의 이름은</h5>
+                                          <p class="card-text">아직 만난 적 없는 너를 찾고 있어..</p>
+                                          <a href="" class="btn btn-primary">Go review page</a>
+                                      </div>
+                                  </div>
+                                  <div class="card scale" style="width: 15rem; margin-right: auto; margin-left: auto;">
+                  
+                                      <img src="./ani_imges/img05.jpg" alt="moana02" class="card-img-top">
+                  
+                                      <div class="card-body">
+                                          <h5 class="card-title">루돌프와 많이있어</h5>
+                                          <p class="card-text">루돌프는 과연 집으로 돌아갈 수 있을까요?</p>
+                                          <a href="" class="btn btn-primary">Go review page</a>
+                                      </div>
+                                  </div>
+                  
+                                  <div class="card scale" style="width: 15rem; margin-right: auto; margin-left: auto;">
+                  
+                                          <img src="./ani_imges/img06.jpg" alt="moana02" class="card-img-top">
+                      
+                                          <div class="card-body">
+                                              <h5 class="card-title">씽</h5>
+                                              <p class="card-text">꿈의 오디션이 시작된다.</p>
+                                              <a href="" class="btn btn-primary">Go review page</a>
+                                          </div>
+                                      </div>
+                                   
+                              </div>
+                              <div class="row mt-5" >
+                                  <div class="card scale" style="width: 15rem; margin-right: auto; margin-left: auto;">
+                  
+                                      <img src="./ani_imges/img07.jpg" alt="moana01" class="card-img-top">
+                  
+                                      <div class="card-body" class="card_left">
+                                          <h5 class="card-title">서울역</h5>
+                                          <p class="card-text">모든것이 이곳에서 시작된다!!</p>
+                                          <a href="" class="btn btn-primary">Go review page</a>
+                                      </div>
+                                  </div>
+                                  <div class="card scale" style="width: 15rem; margin-right: auto; margin-left: auto;">
+                  
+                                      <img src="./ani_imges/img08.jpg" alt="moana02" class="card-img-top">
+                  
+                                      <div class="card-body">
+                                          <h5 class="card-title">앵그리버드 더 무비</h5>
+                                          <p class="card-text">화내지마~~!!!!</p>
+                                          <a href="" class="btn btn-primary">Go review page</a>
+                                      </div>
+                                  </div>
+                  
+                                  <div class="card scale" style="width: 15rem; margin-right: auto; margin-left: auto;">
+                  
+                                          <img src="./ani_imges/img09.jpg" alt="moana02" class="card-img-top">
+                      
+                                          <div class="card-body">
+                                              <h5 class="card-title">주토피아</h5>
+                                              <p class="card-text">재미지겠ZOO??</p>
+                                              <a href="" class="btn btn-primary">Go review page</a>
+                                          </div>
+                                      </div>
+                                   
+                                      
+                         
+                              </div>
+                               <!-- 게시판형식  -->
+                               <ul class="pagination justify-content-center mt-4" >
+                                  <li class="page-item"><a href="" class="page-link">&laquo;</a></li>  
+                                  <li class="page-item"><a href="" class="page-link">&lsaquo;</a></li>
+                                  <li class="page-item"><a href="" class="page-link">1</a></li>
+                                  <li class="page-item"><a href="" class="page-link">2</a></li>
+                                  <li class="page-item"><a href="" class="page-link">3</a></li>
+                                  <li class="page-item"><a href="" class="page-link">4</a></li>
+                                  <li class="page-item"><a href="" class="page-link">5</a></li>
+                                  <li class="page-item"><a href="" class="page-link">&rsaquo;</a></li>
+                                  <li class="page-item"><a href="" class="page-link">&raquo;</a></li>
+                              </ul>
+            
+                           
+            
+                             
+                          </div>
+            
+                       
+                         
+                      
+                     
+                        </article>
+                
+                    <!-- </div>  -->
+                   
+                       
+                  </div>
+                   <div class="col-sm-3" style="margin-top: 100px; ">
+            
+                     
+                      <div class="container">
+                          
+                          <p class="text-center" style="font-family: arial; font-size: 40px; ">영화 리뷰</p>
+                          <button class="btn btn-dark  " style="width: 100%; ">한국영화</button>
+                          <button class="btn btn-dark  mt-3" style="width: 100%; ">외국영화</button>
+                          <button class="btn btn-dark mt-3" style="width: 100%; ">애니메이션</button>
+            
+                      </div>
+                      
+                  
+                    
+                      <table class="table table-hover" style="margin-top: 50px; border: 1px solid black;">
+            
+                         
+                          
+                      <thead class="thead-dark">
+                            <tr>
+                                    <th class="text-white" style="font-family: arial;"></td>
+                                 
+                                    <th class="text-white" style="font-family: arial;">현재 상영작 순위</td>
+                                </tr>
+                      </thead>
+                        
+                      <tbody>
+                          
+                      </tbody>
+                          <tr>
+                              
+                              <td class="text-dark" style="font-family: arial;"><button class="btn btn-danger btn-sm">1</button></td>
+                           
+                              <td class="text-dark" style="font-family: arial;">돈</td>
+                          </tr>
+              
+                          <tr>
+                              <td class="text-dark" style="font-family: arial;"><button class="btn btn-danger btn-sm">2</button></td>
+                    
+                              <td class="text-dark" style="font-family: arial;">어스</td>
+                          </tr>
+              
+                          <tr>
+                              <td class="text-dark" style="font-family: arial;"><button class="btn btn-danger btn-sm">3</button></td>
+                             
+                              <td class="text-dark" style="font-family: arial;">생일</td>
+                           </tr>
+            
+                           <tr>
+                              <td class="text-dark" style="font-family: arial;"><button class="btn btn-dark btn-sm" disabled>4</button></td>
+                           
+                              <td class="text-dark" style="font-family: arial;">장난스런 키스</td>
+                          </tr>
+              
+                          <tr>
+                              <td class="text-dark" style="font-family: arial;"><button class="btn btn-dark btn-sm" disabled>5</button></td>
+                    
+                              <td class="text-dark" style="font-family: arial;">캡틴 마블</td>
+                          </tr>
+              
+                          <tr>
+                              <td class="text-dark" style="font-family: arial;"><button class="btn btn-dark btn-sm" disabled>6</button></td>
+                             
+                              <td class="text-dark" style="font-family: arial;">덤보</td>
+                           </tr>
+            
+                           <tr>
+                              <td class="text-dark" style="font-family: arial;"><button class="btn btn-dark btn-sm" disabled>7</button></td>
+                           
+                              <td class="text-dark" style="font-family: arial;">로망</td>
+                          </tr>
+              
+                          <tr>
+                              <td class="text-dark" style="font-family: arial;"><button class="btn btn-dark btn-sm" disabled>8</button></td>
+                    
+                              <td class="text-dark" style="font-family: arial;">콜레트</td>
+                          </tr>
+              
+                          <tr>
+                              <td class="text-dark" style="font-family: arial;"><button class="btn btn-dark btn-sm" disabled>9</button></td>
+                             
+                              <td class="text-dark" style="font-family: arial;">바이스</td>
+                           </tr>
+                      </table>
+            
+                    
+                      </div>
+            
+                </div>
+              </div>
+            
+
+           <!-- 풋터 -->
+    <footer class="site-footer">
+            <div class="footer-container">
+                <div class="row footer-row" style="display:flex; justify-content:space-around">
+                    <div class="col-sm-12 col-md-6">
+                        <h6>About</h6>
+                        <p class="text-justify">영화리뷰 공작소
+                            <i>영화리뷰 사이트 </i>
+                            <br>
+                            <hr>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate delectus quidem
+                            obcaecati quas architecto inventore vero? Aut in, amet, vitae fugiat dolor assumenda atque
+                            vel provident tempora asperiores eum eius.</p>
+                    </div>
+    
+                    <div class=" footer-party">
+                        <h6>조원</h6>
+                        <ul class="footer-party">
+                            <li><a href="#">고준성</a></li>
+                            <li><a href="#">고승환</a></li>
+                            <li><a href="#">임승택</a></li>
+                            <li><a href="#">류태우</a></li>
+                        </ul>
+                    </div>
+    
+                    <div class="footer-link">
+                        <h6>Quick Links</h6>
+                        <ul class="footer-links">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">한국영화</a></li>
+                            <li><a href="#">서양영화</a></li>
+                            <li><a href="#">애니메이션</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-6 col-xs-12">
+                        <p class="copyright-text">Copyright &copy; 2019 All Rights Reserved by
+                            <a href="#">우리조</a>.
+                        </p>
+                    </div>
+    
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <ul class="social-icons">
+                            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i>face</a></li>
+                            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i>twit</a></li>
+                            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i>git</a></li>
+                            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i>linked</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+
+          
+          
+
+<!-- 부트스크랩트 사용 -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+   
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script> 
+    </body>
+</html>
